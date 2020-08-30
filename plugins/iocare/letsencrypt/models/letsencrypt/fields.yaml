@@ -1,0 +1,25 @@
+fields:
+    email:
+        label: Email
+        comment: LetsEncrypt account email
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    domain:
+        label: Domain
+        comment: E.g. domain.com,www.domain.com
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    webroot:
+        label: WebRoot
+        comment: e.g. /home/domain/public_html
+        oc.commentPosition: ''
+        span: auto
+        type: text
+    certlocation:
+        label: 'Cert Location'
+        comment: e.g. /home/domain/ssl/certs
+        span: auto
+        oc.commentPosition: ''
+        type: text

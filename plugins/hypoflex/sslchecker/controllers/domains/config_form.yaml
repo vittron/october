@@ -1,0 +1,10 @@
+name: Domains
+form: $/hypoflex/sslchecker/models/domains/fields.yaml
+modelClass: Hypoflex\Sslchecker\Models\Domains
+defaultRedirect: hypoflex/sslchecker/domains
+create:
+    redirect: 'hypoflex/sslchecker/domains/update/:id'
+    redirectClose: hypoflex/sslchecker/domains
+update:
+    redirect: hypoflex/sslchecker/domains
+    redirectClose: hypoflex/sslchecker/domains

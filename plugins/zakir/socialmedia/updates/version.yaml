@@ -1,0 +1,4 @@
+1.0.1: 
+    - 'First version of SocialMedia'
+    - 'Created table zakir_socialmedialinks_links'
+    - builder_table_create_zakir_socialmedialinks_links.php

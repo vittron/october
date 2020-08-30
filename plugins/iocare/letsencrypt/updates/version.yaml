@@ -1,0 +1,10 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table iocare_letsencrypt_le'
+    - builder_table_create_iocare_letsencrypt_le.php
+1.0.3:
+    - 'Updated table iocare_letsencrypt_le'
+    - builder_table_update_iocare_letsencrypt_le.php
+1.0.4:
+    - 'Added Cron Job Support to Auto renew Certificate.'

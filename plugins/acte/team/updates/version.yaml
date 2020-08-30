@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table acte_team_team'
+    - builder_table_create_acte_team_team.php
+1.0.3:
+    - 'sort_order default value missing'
+    - update_table_acte_team_team.php
+1.0.4:
+    - 'added validation rules in Team model'
+1.0.5:
+    - 'fixed default string lenght (required by posgresql)'
+1.0.6:
+    - 'Updated table acte_team_team description str to text'
+    - builder_table_update_acte_team_team.php
+1.0.7:
+    - 'Added mask filter property in component team (MDBootstrap)'

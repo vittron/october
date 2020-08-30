@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__ . '/../vendor/autoload.php';
+
+if (sizeof($argv) !== 2) {
+    fwrite(STDERR, "Usage: {$argv[0]} <output>\n");
+    exit(1);
+}
+
+Kibo\Phast\Build\Compiler::getPhastCompiler()->compile($argv[1]);

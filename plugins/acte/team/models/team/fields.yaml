@@ -1,0 +1,60 @@
+fields:
+    is_active:
+        label: 'acte.team::lang.fields.is_active'
+        span: full
+        default: true
+        type: switch
+    name:
+        label: 'acte.team::lang.fields.name'
+        span: auto
+        placeholder: 'John Doe'
+        type: text
+    position:
+        label: 'acte.team::lang.fields.position'
+        span: auto
+        placeholder: CEO
+        type: text
+    img:
+        label: 'acte.team::lang.fields.image'
+        mode: image
+        useCaption: true
+        imageHeight: 250
+        imageWidth: 250
+        span: auto
+        type: fileupload
+    description:
+        label: 'acte.team::lang.fields.description'
+        size: large
+        span: full
+        type: textarea
+    socials:
+        label: 'acte.team::lang.fields.socials'
+        prompt: 'acte.team::lang.fields.socials_prompt'
+        span: full
+        type: repeater
+        form:
+            fields:
+                social:
+                    label: 'acte.team::lang.fields.social'
+                    options:
+                        facebook: Facebook
+                        linkedin: LinkedIn
+                        twitter: Twitter
+                        google-plus: 'Google +'
+                        instagram: Instagram
+                        pinterest: Pinterest
+                        youtube: Youtube
+                        vk: Vkontakte
+                        stack-overflow: 'Stack Overflow'
+                        slack: Slack
+                        github: Github
+                        dribbble: Dribble
+                        reddit-alien: Reddit
+                        envelope: Email
+                    span: auto
+                    type: dropdown
+                link:
+                    label: 'acte.team::lang.fields.link'
+                    span: auto
+                    placeholder: 'http://facebook.com'
+                    type: text

@@ -1,0 +1,16 @@
+columns:
+    id:
+        label: id
+        type: number
+    is_active:
+        label: 'acte.team::lang.fields.is_active'
+        type: text
+    name:
+        label: 'acte.team::lang.fields.name'
+        type: text
+    position:
+        label: 'acte.team::lang.fields.position'
+        type: text
+    description:
+        label: 'acte.team::lang.fields.description'
+        type: text

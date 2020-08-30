@@ -1,0 +1,15 @@
+list: $/hypoflex/sslchecker/models/domains/columns.yaml
+modelClass: Hypoflex\Sslchecker\Models\Domains
+title: Domains
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 100
+defaultSort:
+    column: diff
+    direction: asc
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'hypoflex/sslchecker/domains/update/:id'

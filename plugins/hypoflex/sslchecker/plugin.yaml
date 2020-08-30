@@ -1,0 +1,20 @@
+plugin:
+    name: 'hypoflex.sslchecker::lang.plugin.name'
+    description: 'hypoflex.sslchecker::lang.plugin.description'
+    author: Hypoflex
+    icon: oc-icon-lock
+    homepage: ''
+navigation:
+    ssl-checker:
+        label: 'SSL Checker'
+        url: hypoflex/sslchecker/domains
+        icon: icon-lock
+        sideMenu:
+            domains:
+                label: 'hypoflex.sslchecker::lang.columns.domains'
+                url: hypoflex/sslchecker/domains
+                icon: icon-globe
+            inactive-domains:
+                label: 'hypoflex.sslchecker::lang.columns.inactive_domains'
+                url: hypoflex/sslchecker/inactivedomains
+                icon: icon-power-off

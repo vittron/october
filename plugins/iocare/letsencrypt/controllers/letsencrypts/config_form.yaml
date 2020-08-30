@@ -1,0 +1,10 @@
+name: Letsencrypts
+modelClass: Iocare\Letsencrypt\Models\Letsencrypt
+form: $/iocare/letsencrypt/models/letsencrypt/fields.yaml
+defaultRedirect: iocare/letsencrypt/letsencrypts
+create:
+    redirect: 'iocare/letsencrypt/letsencrypts/update/:id'
+    redirectClose: iocare/letsencrypt/letsencrypts
+update:
+    redirect: iocare/letsencrypt/letsencrypts
+    redirectClose: iocare/letsencrypt/letsencrypts

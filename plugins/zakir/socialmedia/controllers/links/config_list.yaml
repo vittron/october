@@ -1,0 +1,35 @@
+# ===================================
+#  List Behavior Config
+# ===================================
+
+# Model List Column configuration
+list: ~/plugins/zakir/socialmedia/models/link/columns.yaml
+
+# Model Class name
+modelClass: Zakir\SocialMedia\Models\Link
+
+# List Title
+title: zakir.socialmedia::lang.plugin.name
+
+# Link URL for each record
+recordUrl: zakir/socialmedia/links/update/:id
+
+# Displays the sorting link on each column
+showSorting: true
+
+# Default sorting column
+defaultSort:
+    column: sort_order
+    direction: asc
+
+# Display checkboxes next to each record
+showCheckboxes: true
+
+# Toolbar widget configuration
+toolbar:
+    # Partial for toolbar buttons
+    buttons: list_toolbar
+
+    # Search widget configuration
+    search:
+        prompt: backend::lang.list.search_prompt

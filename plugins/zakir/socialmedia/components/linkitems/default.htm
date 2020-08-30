@@ -1,0 +1,30 @@
+<ul class="zr-socialmedia-links">
+	{% for link in linkitems %}
+	<li>
+		<a 
+		style="
+		{% if link.color %}
+			color:{{ link.color }};
+		{% endif %}
+		{% if link.background_color %}
+			background-color:{{ link.background_color }};
+		{% endif %}
+		"
+		{% if link.rel %}
+		rel="{{ link.rel }}" 
+		{% endif %}
+
+		{% if link.target %}
+		target="{{ link.target }}" 
+		{% else %}
+		target="_blank" 
+		{% endif %}
+
+		title="{{ link.title }}"
+		href="{{ link.url }}"
+		class="{{ link.icon }}" >
+
+		</a>
+	</li>
+	{% endfor %}
+</ul>

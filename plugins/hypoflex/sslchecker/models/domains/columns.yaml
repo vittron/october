@@ -1,0 +1,40 @@
+columns:
+    domain:
+        label: 'hypoflex.sslchecker::lang.columns.domain'
+        type: text
+        searchable: true
+        sortable: true
+    ipaddress:
+        label: 'hypoflex.sslchecker::lang.columns.ipaddress'
+        type: text
+    valid_from:
+        label: 'hypoflex.sslchecker::lang.columns.valid_from'
+        type: text
+        searchable: true
+        sortable: true
+    valid_to:
+        label: 'hypoflex.sslchecker::lang.columns.valid_to'
+        type: text
+        searchable: true
+        sortable: true
+    diff:
+        label: 'hypoflex.sslchecker::lang.columns.diff'
+        type: text
+        searchable: true
+        sortable: true
+    partial:
+        label: Info
+        type: partial
+        path: ~/plugins/hypoflex/sslchecker/models/domains/_content_column.htm
+    active:
+        label: 'hypoflex.sslchecker::lang.columns.active'
+        type: number
+        searchable: true
+        invisible: true
+        sortable: true
+    last_check_date:
+        label: 'hypoflex.sslchecker::lang.columns.last_check_date'
+        type: text
+        searchable: true
+        invisible: false
+        sortable: true

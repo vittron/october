@@ -1,0 +1,17 @@
+plugin:
+    name: 'acte.team::lang.plugin.name'
+    description: 'acte.team::lang.plugin.description'
+    author: 'Acte Solutions'
+    icon: oc-icon-users
+    homepage: 'https://github.com/acte-solutions/oc-plugin-team'
+permissions:
+    acte.team.manage_team:
+        tab: 'acte.team::lang.plugin.name'
+        label: 'acte.team::lang.plugin.name'
+navigation:
+    team:
+        label: 'acte.team::lang.plugin.name'
+        url: acte/team/team
+        icon: icon-users
+        permissions:
+            - acte.team.manage_team

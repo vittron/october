@@ -1,0 +1,7 @@
+columns:
+    title:
+        label: zakir.socialmedia::lang.links.title
+        type: text
+    url:
+        label: zakir.socialmedia::lang.links.url
+        type: text

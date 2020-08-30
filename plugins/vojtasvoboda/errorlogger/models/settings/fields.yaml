@@ -1,0 +1,132 @@
+tabs:
+    fields:
+        nativemailer_enabled:
+            tab: vojtasvoboda.errorlogger::lang.nativemailer.tab.label
+            type: switch
+            label: vojtasvoboda.errorlogger::lang.nativemailer.enabled.label
+        nativemailer_email:
+            tab: vojtasvoboda.errorlogger::lang.nativemailer.tab.label
+            label: vojtasvoboda.errorlogger::lang.nativemailer.email.label
+            commentAbove: vojtasvoboda.errorlogger::lang.nativemailer.email.comment
+            default: '@'
+            trigger:
+                    action: show
+                    field: nativemailer_enabled
+                    condition: checked
+        nativemailer_level:
+            tab: vojtasvoboda.errorlogger::lang.nativemailer.tab.label
+            type: dropdown
+            label: vojtasvoboda.errorlogger::lang.nativemailer.level.label
+            commentAbove: vojtasvoboda.errorlogger::lang.nativemailer.level.comment
+            trigger:
+                    action: show
+                    field: nativemailer_enabled
+                    condition: checked
+        nativemailer_debug:
+            tab: vojtasvoboda.errorlogger::lang.nativemailer.tab.label
+            type: checkbox
+            label: vojtasvoboda.errorlogger::lang.nativemailer.debug.label
+            commentAbove: vojtasvoboda.errorlogger::lang.nativemailer.debug.comment
+            trigger:
+                    action: show
+                    field: nativemailer_enabled
+                    condition: checked
+
+        slack_enabled:
+            tab: vojtasvoboda.errorlogger::lang.slack.tab.label
+            type: switch
+            label: vojtasvoboda.errorlogger::lang.slack.enabled.label
+        slack_token:
+            tab: vojtasvoboda.errorlogger::lang.slack.tab.label
+            label: vojtasvoboda.errorlogger::lang.slack.token.label
+            commentAbove: vojtasvoboda.errorlogger::lang.slack.token.comment
+            trigger:
+                    action: show
+                    field: slack_enabled
+                    condition: checked
+        slack_channel:
+            tab: vojtasvoboda.errorlogger::lang.slack.tab.label
+            label: vojtasvoboda.errorlogger::lang.slack.channel.label
+            commentAbove: vojtasvoboda.errorlogger::lang.slack.channel.comment
+            trigger:
+                    action: show
+                    field: slack_enabled
+                    condition: checked
+        slack_username:
+            tab: vojtasvoboda.errorlogger::lang.slack.tab.label
+            label: vojtasvoboda.errorlogger::lang.slack.username.label
+            commentAbove: vojtasvoboda.errorlogger::lang.slack.username.comment
+            trigger:
+                    action: show
+                    field: slack_enabled
+                    condition: checked
+        slack_level:
+            tab: vojtasvoboda.errorlogger::lang.slack.tab.label
+            type: dropdown
+            label: vojtasvoboda.errorlogger::lang.slack.level.label
+            commentAbove: vojtasvoboda.errorlogger::lang.slack.level.comment
+            trigger:
+                    action: show
+                    field: slack_enabled
+                    condition: checked
+        slack_attachment:
+            tab: vojtasvoboda.errorlogger::lang.slack.tab.label
+            type: checkbox
+            label: vojtasvoboda.errorlogger::lang.slack.attachment.label
+            commentAbove: vojtasvoboda.errorlogger::lang.slack.attachment.comment
+            trigger:
+                    action: show
+                    field: slack_enabled
+                    condition: checked
+
+        syslog_enabled:
+            tab: vojtasvoboda.errorlogger::lang.syslog.tab.label
+            type: switch
+            label: vojtasvoboda.errorlogger::lang.syslog.enabled.label
+        syslog_ident:
+            tab: vojtasvoboda.errorlogger::lang.syslog.tab.label
+            label: vojtasvoboda.errorlogger::lang.syslog.ident.label
+            commentAbove: vojtasvoboda.errorlogger::lang.syslog.ident.comment
+            trigger:
+                    action: show
+                    field: syslog_enabled
+                    condition: checked
+        syslog_facility:
+            tab: vojtasvoboda.errorlogger::lang.syslog.tab.label
+            label: vojtasvoboda.errorlogger::lang.syslog.facility.label
+            commentAbove: vojtasvoboda.errorlogger::lang.syslog.facility.comment
+            trigger:
+                    action: show
+                    field: syslog_enabled
+                    condition: checked
+        syslog_level:
+            tab: vojtasvoboda.errorlogger::lang.syslog.tab.label
+            type: dropdown
+            label: vojtasvoboda.errorlogger::lang.syslog.level.label
+            commentAbove: vojtasvoboda.errorlogger::lang.syslog.level.comment
+            trigger:
+                    action: show
+                    field: syslog_enabled
+                    condition: checked
+
+        newrelic_enabled:
+            tab: vojtasvoboda.errorlogger::lang.newrelic.tab.label
+            type: switch
+            label: vojtasvoboda.errorlogger::lang.newrelic.enabled.label
+        newrelic_appname:
+            tab: vojtasvoboda.errorlogger::lang.newrelic.tab.label
+            label: vojtasvoboda.errorlogger::lang.newrelic.appname.label
+            commentAbove: vojtasvoboda.errorlogger::lang.newrelic.appname.comment
+            trigger:
+                    action: show
+                    field: newrelic_enabled
+                    condition: checked
+        newrelic_level:
+            tab: vojtasvoboda.errorlogger::lang.newrelic.tab.label
+            type: dropdown
+            label: vojtasvoboda.errorlogger::lang.newrelic.level.label
+            commentAbove: vojtasvoboda.errorlogger::lang.newrelic.level.comment
+            trigger:
+                    action: show
+                    field: newrelic_enabled
+                    condition: checked

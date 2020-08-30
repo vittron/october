@@ -1,0 +1,34 @@
+fields:
+    icon:
+        label: zakir.socialmedia::lang.links.select_icon
+        type: zakir_allfonticons
+        placeholder: zakir.socialmedia::lang.links.please_select
+        span: left
+    url:
+        label: zakir.socialmedia::lang.links.url
+        span: auto
+        type: text
+    title:
+        label: zakir.socialmedia::lang.links.title
+        span: auto
+        type: text
+    target:
+        label: zakir.socialmedia::lang.links.target
+        span: auto
+        type: text
+        comment: zakir.socialmedia::lang.links.target_comment 
+    rel:
+        label: zakir.socialmedia::lang.links.rel
+        span: auto
+        type: text
+        comment: zakir.socialmedia::lang.links.rel_comment 
+    background_color:
+        label: zakir.socialmedia::lang.links.background_color
+        span: full
+        type: colorpicker
+        allowEmpty: true
+    color:
+        label: zakir.socialmedia::lang.links.color
+        span: full
+        type: colorpicker
+        allowEmpty: true
