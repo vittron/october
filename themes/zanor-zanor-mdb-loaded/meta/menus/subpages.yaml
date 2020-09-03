@@ -1,13 +1,13 @@
-name: SubPages
+name: SbPages
 items:
     -
         title: SubPages
-        nesting: '1'
+        nesting: 1
         type: static-page
         code: ''
         reference: subpages
-        replace: '1'
+        replace: 1
         viewBag:
-            isHidden: '0'
+            isHidden: '1'
             cssClass: ''
             isExternal: '0'

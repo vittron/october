@@ -142,7 +142,7 @@
             targetWidth,
             targetHeight
 
-        if (!this.options.thumbnailWidth && !this.options.thumbnailHeight) {
+        if (!this.options.thumbnailWidth && !this.options.thumbnailWidth) {
             targetWidth = targetHeight = 100
         }
         else if (this.options.thumbnailWidth) {

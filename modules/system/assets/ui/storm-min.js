@@ -5805,8 +5805,7 @@ TextEditor.prototype.getPopupContent=function(){return'<form>                   
                 <div class="modal-body">                                                                \
                     <div class="form-group">                                                            \
                         <p class="inspector-field-comment"></p>                                         \
-                        <textarea class="form-control size-small field-textarea" name="name">           \
-                        </textarea>                                                                     \
+                        <textarea class="form-control size-small field-textarea" name="name" value=""/> \
                     </div>                                                                              \
                 </div>                                                                                  \
                 <div class="modal-footer">                                                              \

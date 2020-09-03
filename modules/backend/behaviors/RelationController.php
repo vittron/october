@@ -1113,7 +1113,7 @@ class RelationController extends ControllerBehavior
             $this->relationObject->add($newModel, $sessionKey);
         }
         elseif ($this->viewMode == 'single') {
-            $newModel = $this->viewModel = $this->viewWidget->model = $this->manageWidget->model;
+            $newModel = $this->manageWidget->model;
             $this->viewWidget->setFormValues($saveData);
 
             /*
@@ -1121,15 +1121,6 @@ class RelationController extends ControllerBehavior
              */
             if ($this->deferredBinding || $this->relationType != 'hasOne') {
                 $newModel->save(null, $this->manageWidget->getSessionKey());
-            }
-
-            if ($this->relationType === 'hasOne') {
-                // Unassign previous relation if one is already assigned
-                $relation = $this->relationObject->getParent()->{$this->relationName} ?? null;
-
-                if ($relation) {
-                    $this->relationObject->remove($relation, $sessionKey);
-                }
             }
 
             $this->relationObject->add($newModel, $sessionKey);
@@ -1166,11 +1157,7 @@ class RelationController extends ControllerBehavior
             }
         }
         elseif ($this->viewMode == 'single') {
-            // Ensure that the view widget model is the same instance as the manage widget model
-            // since they will technically be different object instances in this context as
-            // $viewWidet->model is populated by $this->relationObject->getResults() and
-            // $manageWidget->model is populated by $this->relationModel->find($manageId);
-            $this->viewModel = $this->viewWidget->model = $this->manageWidget->model;
+            $this->viewModel = $this->manageWidget->model;
 
             $this->viewWidget->setFormValues($saveData);
             $this->viewModel->save(null, $this->manageWidget->getSessionKey());
@@ -1254,15 +1241,6 @@ class RelationController extends ControllerBehavior
          */
         elseif ($this->viewMode == 'single') {
             if ($recordId && ($model = $this->relationModel->find($recordId))) {
-                if ($this->relationType === 'hasOne') {
-                    // Unassign previous relation if one is already assigned
-                    $relation = $this->relationObject->getParent()->{$this->relationName} ?? null;
-
-                    if ($relation) {
-                        $this->relationObject->remove($relation, $sessionKey);
-                    }
-                }
-
                 $this->relationObject->add($model, $sessionKey);
                 $this->viewWidget->setFormValues($model->attributes);
 
@@ -1331,11 +1309,7 @@ class RelationController extends ControllerBehavior
                 }
             }
 
-            // Reinitialise the form with a blank model
-            $this->initRelation($this->model);
-
             $this->viewWidget->setFormValues([]);
-            $this->viewModel = $this->relationModel;
         }
 
         return $this->relationRefresh();
