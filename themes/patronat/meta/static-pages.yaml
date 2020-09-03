@@ -1,0 +1,22 @@
+static-pages:
+    index: {  }
+    layouts:
+        layouts-full-image-background: {  }
+        layouts-basic-landing-page: {  }
+        layouts-corporate: {  }
+        layouts-full-image-carousel: {  }
+        layouts-half-page-carousel: {  }
+        layouts-jumbotron: {  }
+        layouts-team-profiles: {  }
+    subpages:
+        subpages-child-one: {  }
+        subpages-child-two: {  }
+        subpages-child-three: {  }
+    vitrina: {  }
+    research: {  }
+    about-us:
+        about-us-history: {  }
+        about-us-documents: {  }
+        about-us-press-about-us: {  }
+        contacts: {  }
+        about-us-awards: {  }
