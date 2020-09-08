@@ -299,36 +299,38 @@
     },
     {
         "name": "dompdf/dompdf",
-        "version": "v0.8.5",
-        "version_normalized": "0.8.5.0",
+        "version": "v0.8.6",
+        "version_normalized": "0.8.6.0",
         "source": {
             "type": "git",
             "url": "https://github.com/dompdf/dompdf.git",
-            "reference": "6782abfc090b132134cd6cea0ec6d76f0fce2c56"
+            "reference": "db91d81866c69a42dad1d2926f61515a1e3f42c5"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/dompdf/dompdf/zipball/6782abfc090b132134cd6cea0ec6d76f0fce2c56",
-            "reference": "6782abfc090b132134cd6cea0ec6d76f0fce2c56",
+            "url": "https://api.github.com/repos/dompdf/dompdf/zipball/db91d81866c69a42dad1d2926f61515a1e3f42c5",
+            "reference": "db91d81866c69a42dad1d2926f61515a1e3f42c5",
             "shasum": ""
         },
         "require": {
             "ext-dom": "*",
             "ext-mbstring": "*",
-            "phenx/php-font-lib": "^0.5.1",
+            "phenx/php-font-lib": "^0.5.2",
             "phenx/php-svg-lib": "^0.3.3",
             "php": "^7.1"
         },
         "require-dev": {
+            "mockery/mockery": "^1.3",
             "phpunit/phpunit": "^7.5",
             "squizlabs/php_codesniffer": "^3.5"
         },
         "suggest": {
             "ext-gd": "Needed to process images",
             "ext-gmagick": "Improves image processing performance",
-            "ext-imagick": "Improves image processing performance"
+            "ext-imagick": "Improves image processing performance",
+            "ext-zlib": "Needed for pdf stream compression"
         },
-        "time": "2020-02-20T03:52:51+00:00",
+        "time": "2020-08-30T22:54:22+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1376,17 +1378,17 @@
     },
     {
         "name": "php-http/discovery",
-        "version": "1.9.1",
-        "version_normalized": "1.9.1.0",
+        "version": "1.10.0",
+        "version_normalized": "1.10.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/php-http/discovery.git",
-            "reference": "64a18cc891957e05d91910b3c717d6bd11fbede9"
+            "reference": "88ff14cad4a0db68b343260fa7ac3f1599703660"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/php-http/discovery/zipball/64a18cc891957e05d91910b3c717d6bd11fbede9",
-            "reference": "64a18cc891957e05d91910b3c717d6bd11fbede9",
+            "url": "https://api.github.com/repos/php-http/discovery/zipball/88ff14cad4a0db68b343260fa7ac3f1599703660",
+            "reference": "88ff14cad4a0db68b343260fa7ac3f1599703660",
             "shasum": ""
         },
         "require": {
@@ -1406,7 +1408,7 @@
             "php-http/message": "Allow to use Guzzle, Diactoros or Slim Framework factories",
             "puli/composer-plugin": "Sets up Puli which is recommended for Discovery to work. Check http://docs.php-http.org/en/latest/discovery.html for more details."
         },
-        "time": "2020-07-13T15:44:45+00:00",
+        "time": "2020-09-04T08:41:23+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1568,21 +1570,21 @@
     },
     {
         "name": "php-http/message",
-        "version": "1.8.0",
-        "version_normalized": "1.8.0.0",
+        "version": "1.9.0",
+        "version_normalized": "1.9.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/php-http/message.git",
-            "reference": "ce8f43ac1e294b54aabf5808515c3554a19c1e1c"
+            "reference": "2c7256e3c1aba0bfca70f099810f1c7712e00945"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/php-http/message/zipball/ce8f43ac1e294b54aabf5808515c3554a19c1e1c",
-            "reference": "ce8f43ac1e294b54aabf5808515c3554a19c1e1c",
+            "url": "https://api.github.com/repos/php-http/message/zipball/2c7256e3c1aba0bfca70f099810f1c7712e00945",
+            "reference": "2c7256e3c1aba0bfca70f099810f1c7712e00945",
             "shasum": ""
         },
         "require": {
-            "clue/stream-filter": "^1.4",
+            "clue/stream-filter": "^1.4.1",
             "php": "^7.1",
             "php-http/message-factory": "^1.0.2",
             "psr/http-message": "^1.0"
@@ -1593,6 +1595,7 @@
         "require-dev": {
             "akeneo/phpspec-skip-example-extension": "^1.0",
             "coduo/phpspec-data-provider-extension": "^1.0",
+            "ergebnis/composer-normalize": "^2.1",
             "ext-zlib": "*",
             "guzzlehttp/psr7": "^1.0",
             "henrikbjorn/phpspec-code-coverage": "^1.0",
@@ -1606,7 +1609,7 @@
             "slim/slim": "Used with Slim Framework PSR-7 implementation",
             "zendframework/zend-diactoros": "Used with Diactoros Factories"
         },
-        "time": "2019-08-05T06:55:08+00:00",
+        "time": "2020-08-17T06:33:14+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2209,17 +2212,17 @@
     },
     {
         "name": "symfony/http-foundation",
-        "version": "v5.1.3",
-        "version_normalized": "5.1.3.0",
+        "version": "v5.1.5",
+        "version_normalized": "5.1.5.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/http-foundation.git",
-            "reference": "1f0d6627e680591c61e9176f04a0dc887b4e6702"
+            "reference": "41a4647f12870e9d41d9a7d72ff0614a27208558"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/1f0d6627e680591c61e9176f04a0dc887b4e6702",
-            "reference": "1f0d6627e680591c61e9176f04a0dc887b4e6702",
+            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/41a4647f12870e9d41d9a7d72ff0614a27208558",
+            "reference": "41a4647f12870e9d41d9a7d72ff0614a27208558",
             "shasum": ""
         },
         "require": {
@@ -2237,7 +2240,7 @@
         "suggest": {
             "symfony/mime": "To use the file extension guesser"
         },
-        "time": "2020-07-23T10:04:31+00:00",
+        "time": "2020-08-17T07:48:54+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
