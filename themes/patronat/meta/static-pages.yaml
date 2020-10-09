@@ -2,13 +2,13 @@ static-pages:
     index: {  }
     vitrina: {  }
     research: {  }
+    contacts: {  }
     about-us:
         about-us-history: {  }
         about-us-istoriya-napoyu: {  }
         about-us-awards: {  }
-        about-us-documents: {  }
         about-us-press-about-us: {  }
-        contacts: {  }
+        about-us-documents: {  }
     subpages:
         subpages-child-one: {  }
         subpages-child-two: {  }
