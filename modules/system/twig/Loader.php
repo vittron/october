@@ -37,16 +37,12 @@ class Loader implements TwigLoaderInterface
             return $this->cache[$name];
         }
 
-        if (File::isFile($name)) {
-            return $this->cache[$name] = $name;
-        }
-
         $view = $name;
         if (File::extension($view) === $this->extension) {
             $view = substr($view, 0, -strlen($this->extension));
         }
 
-        $path = $finder->find($view);
+        $path = $finder->find($name);
         return $this->cache[$name] = $path;
     }
 

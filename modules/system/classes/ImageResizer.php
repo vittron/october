@@ -219,9 +219,21 @@ class ImageResizer
      */
     public function getConfig()
     {
+        $disk = $this->image['disk'];
+
+        // Normalize local disk adapters with symlinked paths to their target path
+        // to support atomic deployments where the base application path changes
+        // each deployment but the realpath of the storage directory does not
+        if (FileHelper::isLocalDisk($disk)) {
+            $realPath = realpath($disk->getAdapter()->getPathPrefix());
+            if ($realPath) {
+                $disk->getAdapter()->setPathPrefix($realPath);
+            }
+        }
+
         $config = [
             'image' => [
-                'disk' => $this->image['disk'],
+                'disk' => $disk,
                 'path' => $this->image['path'],
                 'source' => $this->image['source'],
             ],
@@ -471,7 +483,7 @@ class ImageResizer
     {
         // Slashes in URL params have to be double encoded to survive Laravel's router
         // @see https://github.com/octobercms/october/issues/3592#issuecomment-671017380
-        $resizedUrl = urlencode(urlencode($this->getResizedUrl()));
+        $resizedUrl = rawurlencode(rawurlencode($this->getResizedUrl()));
 
         // Get the current configuration's identifier
         $identifier = $this->getIdentifier();
@@ -500,7 +512,10 @@ class ImageResizer
             $url = $resizedDisk->url($this->getPathToResizedImage());
         }
 
-        return $url;
+        // Ensure that a properly encoded URL is returned
+        $segments = explode('/', $url);
+        $lastSegment = array_pop($segments);
+        return implode('/', $segments) . '/' . rawurlencode(rawurldecode($lastSegment));
     }
 
     /**
@@ -556,14 +571,14 @@ class ImageResizer
         // Process a string
         } elseif (is_string($image)) {
             // Parse the provided image path into a filesystem ready relative path
-            $relativePath = static::normalizePath(urldecode(parse_url($image, PHP_URL_PATH)));
+            $relativePath = static::normalizePath(rawurldecode(parse_url($image, PHP_URL_PATH)));
 
             // Loop through the sources available to the application to pull from
             // to identify the source most likely to be holding the image
             $resizeSources = static::getAvailableSources();
             foreach ($resizeSources as $source => $details) {
                 // Normalize the source path
-                $sourcePath = static::normalizePath(urldecode(parse_url($details['path'], PHP_URL_PATH)));
+                $sourcePath = static::normalizePath(rawurldecode(parse_url($details['path'], PHP_URL_PATH)));
 
                 // Identify if the current source is a match
                 if (starts_with($relativePath, $sourcePath)) {
@@ -609,7 +624,7 @@ class ImageResizer
             }
         }
 
-        if (!$disk || !$path || !$selectedSource) {
+        if (!$disk || !$path || !$selectedSource || (!in_array(FileHelper::extension($path), ['jpg', 'jpeg', 'png', 'webp', 'gif']))) {
             if (is_object($image)) {
                 $image = get_class($image);
             }
@@ -712,7 +727,7 @@ class ImageResizer
     {
         // Slashes in URL params have to be double encoded to survive Laravel's router
         // @see https://github.com/octobercms/october/issues/3592#issuecomment-671017380
-        $decodedUrl = urldecode(urldecode($encodedUrl));
+        $decodedUrl = rawurldecode($encodedUrl);
         $url = null;
 
         // The identifier should be the signed version of the decoded URL
