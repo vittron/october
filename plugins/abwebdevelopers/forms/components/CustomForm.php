@@ -412,8 +412,8 @@ class CustomForm extends ComponentBase
             if (!empty($fieldRules)) {
                 $rules[$field->code] = $fieldRules;
 
-                if (!empty($field->validation_message)) {
-                    $messages[$field->code] = $field->validation_message;
+                if (!empty($field->validation_messages)) {
+                    $messages[$field->code] = $field->validation_messages;
                 } else {
                     $messages[$field->code] = $field->name . ' is invalid';
                 }

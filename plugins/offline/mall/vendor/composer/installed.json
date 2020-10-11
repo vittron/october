@@ -1378,17 +1378,17 @@
     },
     {
         "name": "php-http/discovery",
-        "version": "1.10.0",
-        "version_normalized": "1.10.0.0",
+        "version": "1.12.0",
+        "version_normalized": "1.12.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/php-http/discovery.git",
-            "reference": "88ff14cad4a0db68b343260fa7ac3f1599703660"
+            "reference": "4366bf1bc39b663aa87459bd725501d2f1988b6c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/php-http/discovery/zipball/88ff14cad4a0db68b343260fa7ac3f1599703660",
-            "reference": "88ff14cad4a0db68b343260fa7ac3f1599703660",
+            "url": "https://api.github.com/repos/php-http/discovery/zipball/4366bf1bc39b663aa87459bd725501d2f1988b6c",
+            "reference": "4366bf1bc39b663aa87459bd725501d2f1988b6c",
             "shasum": ""
         },
         "require": {
@@ -1408,7 +1408,7 @@
             "php-http/message": "Allow to use Guzzle, Diactoros or Slim Framework factories",
             "puli/composer-plugin": "Sets up Puli which is recommended for Discovery to work. Check http://docs.php-http.org/en/latest/discovery.html for more details."
         },
-        "time": "2020-09-04T08:41:23+00:00",
+        "time": "2020-09-22T13:31:04+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2212,17 +2212,17 @@
     },
     {
         "name": "symfony/http-foundation",
-        "version": "v5.1.5",
-        "version_normalized": "5.1.5.0",
+        "version": "v5.1.6",
+        "version_normalized": "5.1.6.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/http-foundation.git",
-            "reference": "41a4647f12870e9d41d9a7d72ff0614a27208558"
+            "reference": "6cca6b2e4b69fc5bace160d14cf1ee5f71483db4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/41a4647f12870e9d41d9a7d72ff0614a27208558",
-            "reference": "41a4647f12870e9d41d9a7d72ff0614a27208558",
+            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/6cca6b2e4b69fc5bace160d14cf1ee5f71483db4",
+            "reference": "6cca6b2e4b69fc5bace160d14cf1ee5f71483db4",
             "shasum": ""
         },
         "require": {
@@ -2240,7 +2240,7 @@
         "suggest": {
             "symfony/mime": "To use the file extension guesser"
         },
-        "time": "2020-08-17T07:48:54+00:00",
+        "time": "2020-09-13T05:01:27+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
