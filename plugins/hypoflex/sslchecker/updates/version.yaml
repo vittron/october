@@ -1,0 +1,11 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table hypoflex_sslchecker_domains'
+    - builder_table_create_hypoflex_sslchecker_domains.php
+1.0.3:
+    - 'Updated table hypoflex_sslchecker_domains'
+    - builder_table_update_hypoflex_sslchecker_domains.php
+1.0.4:
+    - 'Updated table hypoflex_sslchecker_domains'
+    - builder_table_update_hypoflex_sslchecker_domains_2.php

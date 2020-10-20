@@ -1,0 +1,11 @@
+plugin:
+    name: 'iocare.letsencrypt::lang.plugin.name'
+    description: 'iocare.letsencrypt::lang.plugin.description'
+    author: iocare
+    icon: oc-icon-lock
+    homepage: 'https://iocare.in'
+navigation:
+    main-menu-item2:
+        label: LetsEncrypt
+        url: iocare/letsencrypt/settings
+        icon: icon-lock

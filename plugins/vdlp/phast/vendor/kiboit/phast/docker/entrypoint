@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -eu
+
+if [ -d /data ]; then
+    usermod -u `stat -c %u /data` docker 2>&1 | grep -v '^usermod: no changes' || :
+fi
+
+sudo -u docker "$@"

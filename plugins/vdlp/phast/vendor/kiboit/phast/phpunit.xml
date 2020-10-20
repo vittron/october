@@ -1,0 +1,15 @@
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.5/phpunit.xsd"
+        colors="true"
+>
+    <php>
+        <ini name="error_reporting" value="E_ALL"/>
+    </php>
+    <testsuites>
+        <testsuite name="all">
+            <directory>test/</directory>
+            <exclude>test/php/HTTP/CURLClientTest.php</exclude>
+        </testsuite>
+    </testsuites>
+</phpunit>

@@ -1,0 +1,15 @@
+@import "styles2.css" projection;
+@import "styles2.css";
+body {
+    background: black;
+    color: navajowhite;
+    font-family: 'VT323', monospace;
+    background-image: url(../images/batman.jpg);
+}
+.my-class {
+    background: red;
+}
+.some-other-class {
+    background: yellow;
+    color: black;
+}

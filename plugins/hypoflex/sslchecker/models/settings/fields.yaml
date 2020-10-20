@@ -1,0 +1,25 @@
+fields:
+    dataMethode:
+        label: 'hypoflex.sslchecker::lang.settings.datamethode.label'
+        options:
+            all: 'Check all records'
+            single: 'Check only active records'
+        span: auto
+        default: ''
+        type: dropdown
+        comment: 'hypoflex.sslchecker::lang.settings.datamethode.comment'
+    jobRepeater:
+        label: 'hypoflex.sslchecker::lang.settings.jobrepeater.label'
+        options:
+            everyMinute: 'Every Minute'
+            everyFiveMinutes: 'Every 5 Minutes'
+            everyTenMinutes: 'Every 10 Minutes'
+            everyThirtyMinutes: 'Every 30 Minutes'
+            hourly: 'Every Hour'
+            daily: 'Every Day'
+            weekly: 'Every Week'
+            monthly: 'Every Month'
+        span: left
+        disabled: 0
+        type: dropdown
+        comment: 'hypoflex.sslchecker::lang.settings.jobrepeater.comment'

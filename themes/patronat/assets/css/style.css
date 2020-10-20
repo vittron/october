@@ -1,0 +1,180 @@
+/* Your custom styles */
+/* Navigation*/
+body {
+    color: #582841;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.nav-blue {
+    background-color: #2b3b68;
+}
+
+.scrolling-navbar {
+    -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
+    transition: background .5s ease-in-out, padding .5s ease-in-out;
+}
+
+.navbar .btn-group .dropdown-menu a:hover {
+    color: #000 !important;
+}
+.navbar .btn-group .dropdown-menu a:active {
+    color: #fff !important;
+}
+.top-nav-collapse {
+    background-color: #2b3b68;
+}
+
+.view {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+footer.page-footer {
+    background-color: #2b3b68;
+    margin-top: -1px;
+    color: #582841;
+}
+
+/*Call to action*/
+.flex-center {
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #2b3b68;
+    }    
+    .display-3 {
+        font-size: 3rem;
+        margin-top: 4rem;
+    }
+    h3 {
+        font-size: 1.3rem;
+    }
+}
+
+.navbar.navbar-light .navbar-nav .nav-item a.nav-link {
+    font-weight: normal;
+    color: white;
+}
+.navbar.navbar-light .navbar-nav .nav-item a.nav-link:hover,
+.navbar.navbar-light .navbar-nav .nav-item.active a.nav-link:hover {
+    color: #fccb6d;
+}
+.navbar.navbar-light.no-sidebar .navbar-nav .nav-item a.nav-link:hover,
+.navbar.navbar-light.no-sidebar .navbar-nav .nav-item.active a.nav-link:hover {
+    color: #333;
+}
+
+.navbar.navbar-light.no-sidebar,
+.navbar.navbar-light.top-nav-collapse {
+    background-color: #fccb6d;
+}
+
+.navbar.navbar-light.no-sidebar .navbar-nav .nav-item a.nav-link,
+.navbar.navbar-light.top-nav-collapse .navbar-nav .nav-item a.nav-link {
+    color: #582841;
+}
+
+.navbar.navbar-light .navbar-brand {
+    align-self: auto;
+    padding-top: .2rem;
+    font-weight: normal;
+    color: white;
+}
+.navbar.navbar-light.no-sidebar .navbar-brand,
+.navbar.navbar-light.top-nav-collapse .navbar-brand {
+    color: #582841;
+}
+
+.navbar.navbar-light.no-sidebar .navbar-toggler-icon,
+.navbar.navbar-light.top-nav-collapse .navbar-toggler-icon {
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar.navbar-light .navbar-toggler-icon {
+    color: white;
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #fccb6d;
+    }
+    
+    .navbar.navbar-light .navbar-brand {
+        color: #582841;
+    }
+    
+    .navbar.navbar-light .navbar-nav .nav-item a.nav-link {
+        color: #582841;
+    }
+    
+    .navbar.navbar-light .navbar-toggler-icon {
+        background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+}
+
+.navbar form.form-inline {
+    display: none;
+}
+
+.greeting .emphasis,
+article .emphasis {
+    color: #b71c1c;
+    font-weight: bold;
+}
+
+.greeting a .emphasis,
+article a .emphasis {
+    text-decoration: underline;
+}
+
+.greeting .emphasis.big {
+    font-size: 1.6rem;
+}
+
+footer.page-footer {
+    background-color: #fccb6d;
+}
+
+#form_question_form .form-control,
+#form_question_form label {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+#form_question_form input,
+#form_question_form textarea {
+    border-color: #582841;
+    height: 1.5rem;
+}
+
+#form_question_form .abf-textarea label {
+    vertical-align: top;
+}
+
+#form_question_form textarea {
+    height: 6rem;
+}
+
+footer.page-footer a,
+footer.page-footer i {
+    color: #582841;
+    font-size: xx-large;
+}
+
+footer.page-footer .contacts i {
+    display: inline-block;
+    padding: 0 10px;
+}
+
+footer.page-footer .footer-copyright {
+    color: white;
+}

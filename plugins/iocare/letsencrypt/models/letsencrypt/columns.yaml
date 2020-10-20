@@ -1,0 +1,17 @@
+columns:
+    email:
+        label: Email
+        type: text
+        searchable: true
+    domain:
+        label: Domain
+        type: text
+        searchable: true
+    webroot:
+        label: Webroot
+        type: text
+        searchable: true
+    certlocation:
+        label: CertLoc
+        type: text
+        searchable: true

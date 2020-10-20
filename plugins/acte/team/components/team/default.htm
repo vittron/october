@@ -1,0 +1,31 @@
+{% set records = __SELF__.records %}
+<!-- component team -->
+<div class="row">
+{% for record in records %}
+<div class="col-md-6 col-lg-4 mb-4">
+  <div class="card card-cascade">
+    <div class="view view-cascade overlay">
+      <img class="card-img-top" src="{{ record.img.thumb('400', '300', 'crop')}}" alt="Card image cap">
+      <a>
+        <div class="mask rgba-{{ __SELF__.property('mask') }}"></div>
+      </a>
+    </div>
+
+    <div class="card-body card-body-cascade text-center h-100">
+      <h4 class="card-title"><strong>{{ record.name }}</strong></h4>
+      <h6 class="font-weight-bold py-2">{{ record.position }}</h6>
+      {% if record.description %}
+        <p class="card-text">{{ record.description }}</p>
+      {% endif %}
+      {% for item in record.socials %}
+      <a type="button" class="btn-floating btn-small btn-{{ item.btn }}" href="{{ item.link }}">
+        <i class="fa fa-{{ item.social }}"></i>
+      </a>
+      {% endfor %}
+    </div>
+
+  </div>
+</div>
+{% endfor %}
+</div>
+<!-- end component team -->

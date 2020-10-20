@@ -1,0 +1,20 @@
+<?php if($record->diff <= 35 && $record->diff >15) { ?>
+<span class="list-badge badge-warning">
+    <i class="icon-exclamation"></i>
+</span>
+<?php } ?>
+<?php if($record->diff <= 15 && $record->diff >= 1) { ?>
+<span class="list-badge badge-danger">
+    <i class="icon-exclamation"></i>
+</span>
+<?php } ?>
+<?php if($record->diff == 0) { ?>
+<span class="list-badge badge-danger">
+    <i class="icon-exclamation"></i>
+</span>
+<?php } ?>
+<?php if($record->diff >= 36) { ?>
+<span class="list-badge badge-success">
+    <i class="icon-check"></i>
+</span>
+<?php } ?>

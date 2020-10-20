@@ -1,0 +1,10 @@
+name: InactiveDomains
+form: $/hypoflex/sslchecker/models/inactivedomains/fields.yaml
+modelClass: Hypoflex\Sslchecker\Models\InactiveDomains
+defaultRedirect: hypoflex/sslchecker/inactivedomains
+create:
+    redirect: 'hypoflex/sslchecker/inactivedomains/update/:id'
+    redirectClose: hypoflex/sslchecker/inactivedomains
+update:
+    redirect: hypoflex/sslchecker/inactivedomains
+    redirectClose: hypoflex/sslchecker/inactivedomains

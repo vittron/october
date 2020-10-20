@@ -1,0 +1,8 @@
+name: Patronat
+description: 'Enhanced and fitted theme with some basic MDB Layouts loaded.'
+author: 'Zanor, vittron'
+homepage: ''
+code: patronat
+require:
+    - RainLab.Pages
+    - RainLab.Blog

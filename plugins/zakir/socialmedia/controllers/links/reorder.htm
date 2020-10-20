@@ -1,0 +1,11 @@
+<?php Block::put('breadcrumb') ?>
+    <ul>
+        <li><a href="<?= Backend::url('zakir/socialmedia/links') ?>">
+	        <?= e(trans('zakir.socialmedia::lang.links.all_titles')) ?>
+    	    </a>
+    	</li>
+        <li><?= e($this->pageTitle) ?></li>
+    </ul>
+<?php Block::endPut() ?>
+
+<?= $this->reorderRender() ?>

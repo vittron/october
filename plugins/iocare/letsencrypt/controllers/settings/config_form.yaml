@@ -1,0 +1,13 @@
+name: Settings
+modelClass: Iocare\Letsencrypt\Models\Letsencrypt
+form: $/iocare/letsencrypt/models/letsencrypt/fields.yaml
+defaultRedirect: iocare/letsencrypt/settings
+create:
+    redirect: 'iocare/letsencrypt/settings/update/:id'
+    redirectClose: iocare/letsencrypt/settings
+update:
+    title: 'Update Certificate'
+    redirect: iocare/letsencrypt/settings
+    redirectClose: iocare/letsencrypt/settings
+    flashSave: 'Lets Encrypt Email updated'
+preview: {  }

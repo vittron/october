@@ -1,0 +1,6 @@
+fields:
+  content:
+      type: partial
+      path: $/zakir/allfonticons/models/settings/_content_field.htm
+  font_awesome_link:
+    label: zakir.allfonticons::lang.icon.name

@@ -1,0 +1,44 @@
+html,
+body {
+    height: 100%;
+}
+
+.view {
+    height: 93%;
+}
+
+.hm-black-light .full-bg-img,
+.hm-black-light .mask {
+    background-color: inherit;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.full-bg-img .tagline {
+    font-weight: normal;
+}
+
+.full-bg-img ul {
+    position: relative;
+    top: 10%;
+}
+
+.greeting p {
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .greeting p {
+        font-size: 0.9rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+    
+    .greeting .emphasis.big {
+        font-size: 1rem;
+    }
+}
+
+.benefits .card {
+    background-color: #fefcf9;
+}

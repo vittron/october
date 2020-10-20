@@ -1,0 +1,5 @@
+title: Settings
+modelClass: Iocare\Letsencrypt\Models\Letsencrypt
+nameFrom: email
+toolbar:
+    buttons: reorder_toolbar

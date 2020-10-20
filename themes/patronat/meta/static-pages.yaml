@@ -1,0 +1,23 @@
+static-pages:
+    index: {  }
+    vitrina: {  }
+    research: {  }
+    contacts: {  }
+    about-us:
+        about-us-history: {  }
+        about-us-istoriya-napoyu: {  }
+        about-us-awards: {  }
+        about-us-press-about-us: {  }
+        about-us-documents: {  }
+    subpages:
+        subpages-child-one: {  }
+        subpages-child-two: {  }
+        subpages-child-three: {  }
+    layouts:
+        layouts-full-image-background: {  }
+        layouts-basic-landing-page: {  }
+        layouts-corporate: {  }
+        layouts-full-image-carousel: {  }
+        layouts-half-page-carousel: {  }
+        layouts-jumbotron: {  }
+        layouts-team-profiles: {  }

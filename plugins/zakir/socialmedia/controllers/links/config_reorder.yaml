@@ -1,0 +1,5 @@
+title: zakir.socialmedia::lang.links.reorder_list
+modelClass: Zakir\SocialMedia\Models\Link
+nameFrom: title
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,38 @@
+description = "4 Column Footer"
+
+[viewBag]
+==
+<!--Footer-->
+<footer class="page-footer center-on-small-only">
+
+    <!--Footer links-->
+    <div class="container">
+        <div class="row mt-3">
+            <!--First column-->
+            <div class="col-md-6 ml-auto">
+                <h3 class="title mb-3 text-center"><strong>Запитати медовара</strong></h3>
+                {% component 'customForm' %}
+            </div>
+            <!--/.First column-->
+            <hr class="w-100 clearfix d-sm-none">
+            <!--Second column-->
+            <div class="col-md-6 ml-auto">
+                {% content 'footer/column2.htm' %}
+            </div>
+            <!--/.Second column-->
+            <hr class="w-100 clearfix d-sm-none">
+        </div>
+    </div>
+    <!--/.Footer links-->
+
+    <!--Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © {{ 'now'|date('Y') }} ТМ "Патронат": Всі права захищено.
+
+        </div>
+    </div>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->

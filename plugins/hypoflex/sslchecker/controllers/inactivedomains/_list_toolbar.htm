@@ -1,0 +1,41 @@
+<div data-control="toolbar">
+    <a href="<?= Backend::url('hypoflex/sslchecker/inactivedomains/create') ?>"
+       class="btn btn-primary oc-icon-plus"><?= e(trans('backend::lang.form.create')) ?></a>
+    <button
+            class="btn btn-default oc-icon-trash-o"
+            disabled="disabled"
+            onclick="$(this).data('request-data', {
+            checked: $('.control-list').listWidget('getChecked')
+        })"
+            data-request="onDelete"
+            data-request-confirm="<?= e(trans('backend::lang.list.delete_selected_confirm')) ?>"
+            data-trigger-action="enable"
+            data-trigger=".control-list input[type=checkbox]"
+            data-trigger-condition="checked"
+            data-request-success="$(this).prop('disabled', true)"
+            data-stripe-load-indicator>
+        <?= e(trans('backend::lang.list.delete_selected')) ?>
+    </button>
+    <button
+            class="btn btn-default oc-icon-trash-o"
+            disabled="disabled"
+            onclick="$(this).data('request-data', {
+            checked: $('.control-list').listWidget('getChecked')
+        })"
+            data-request="onActiveYes"
+            data-request-confirm="<?= e(trans('hypoflex.sslchecker::lang.list.activate_confirm')) ?>"
+            data-trigger-action="enable"
+            data-trigger=".control-list input[type=checkbox]"
+            data-trigger-condition="checked"
+            data-request-success="$(this).prop('disabled', true)"
+            data-stripe-load-indicator>
+        <?= e(trans('hypoflex.sslchecker::lang.list.activate_button')) ?>
+    </button>
+    <a href="<?= Backend::url('hypoflex/sslchecker/domains/info') ?>"
+       class="btn btn-primary oc-icon-refresh" style="float:right;"
+
+       data-request="onSSLCheckHandler"
+       data-stripe-load-indicator
+
+    >SSL Check</a>
+</div>

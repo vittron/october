@@ -1,0 +1,10 @@
+name: Team
+form: $/acte/team/models/team/fields.yaml
+modelClass: Acte\Team\Models\Team
+defaultRedirect: acte/team/team
+create:
+    redirect: 'acte/team/team/update/:id'
+    redirectClose: acte/team/team
+update:
+    redirect: acte/team/team
+    redirectClose: acte/team/team

@@ -1,0 +1,34 @@
+description = "No Sidebar"
+
+[staticPage]
+useContent = 1
+default = 0
+
+[fontAwesomeCssLink]
+
+[linkList]
+linkTarget = "_blank"
+
+[customForm]
+formCode = "question_form"
+==
+<?php
+function onStart()
+{
+    $this->addCss('assets/css/frontpage.css');
+    $this->addJs('assets/js/main.js');
+}
+?>
+==
+{% partial 'site/head' %}
+{% partial 'site/scrollingNavbar' mainLayout="no-sidebar" %}
+
+<div class="container py-5">
+    <main>
+        <article>
+            {% page %}
+        </article>
+    </main>
+</div>
+
+{% partial 'site/footer' %}

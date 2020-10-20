@@ -1,0 +1,15 @@
+name: MainMenu
+items:
+    -
+        title: main
+        nesting: null
+        type: all-static-pages
+        url: null
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: 1
+        viewBag:
+            isHidden: '1'
+            cssClass: ''
+            isExternal: '0'

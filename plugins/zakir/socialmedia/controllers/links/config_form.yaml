@@ -1,0 +1,18 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+form: ~/plugins/zakir/socialmedia/models/link/fields.yaml
+modelClass: Zakir\SocialMedia\Models\Link
+defaultRedirect: zakir/socialmedia/links
+
+create:
+  title: zakir.socialmedia::lang.links.create_title
+  redirect: zakir/socialmedia/links/update/:id
+  redirectClose: zakir/socialmedia/links/
+  flashSave: backend::lang.form.create_success
+
+update:
+  title: zakir.socialmedia::lang.links.update_title
+  redirectClose: zakir/socialmedia/links
+  flashSave: backend::lang.form.update_success
