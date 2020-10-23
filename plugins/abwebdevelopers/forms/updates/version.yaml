@@ -31,4 +31,15 @@
     - 'Remove obsolete foreign key constraints for tables'
     - remove_foreign_key_constraints.php
 1.2.2:
-    - 'Add persmissions to the plugin'
+    - 'Add permissions to the plugin'
+1.2.3:
+    - 'Add ordering for fields'
+1.2.4:
+    - 'Update lang for successful ordering of fields'
+1.2.5:
+    - 'Add support for HTML Attributes in TextArea field'
+1.2.6:
+    - 'Add notification reply-to fields'
+    - add_replyto_to_forms_table.php
+1.2.7:
+    - 'Add German translation'

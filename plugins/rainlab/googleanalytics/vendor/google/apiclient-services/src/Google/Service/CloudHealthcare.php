@@ -16,7 +16,7 @@
  */
 
 /**
- * Service definition for CloudHealthcare (v1beta1).
+ * Service definition for CloudHealthcare (v1).
  *
  * <p>
  * Manage, store, and access healthcare data in Google Cloud Platform.</p>
@@ -36,7 +36,6 @@ class Google_Service_CloudHealthcare extends Google_Service
 
   public $projects_locations;
   public $projects_locations_datasets;
-  public $projects_locations_datasets_annotationStores;
   public $projects_locations_datasets_dicomStores;
   public $projects_locations_datasets_dicomStores_studies;
   public $projects_locations_datasets_dicomStores_studies_series;
@@ -60,7 +59,7 @@ class Google_Service_CloudHealthcare extends Google_Service
     $this->rootUrl = $rootUrl ?: 'https://healthcare.googleapis.com/';
     $this->servicePath = '';
     $this->batchPath = 'batch';
-    $this->version = 'v1beta1';
+    $this->version = 'v1';
     $this->serviceName = 'healthcare';
 
     $this->projects_locations = new Google_Service_CloudHealthcare_Resource_ProjectsLocations(
@@ -70,7 +69,7 @@ class Google_Service_CloudHealthcare extends Google_Service
         array(
           'methods' => array(
             'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -80,17 +79,13 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+name}/locations',
+              'path' => 'v1/{+name}/locations',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'filter' => array(
-                  'location' => 'query',
-                  'type' => 'string',
                 ),
                 'pageToken' => array(
                   'location' => 'query',
@@ -99,6 +94,10 @@ class Google_Service_CloudHealthcare extends Google_Service
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
+                ),
+                'filter' => array(
+                  'location' => 'query',
+                  'type' => 'string',
                 ),
               ),
             ),
@@ -112,7 +111,7 @@ class Google_Service_CloudHealthcare extends Google_Service
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1beta1/{+parent}/datasets',
+              'path' => 'v1/{+parent}/datasets',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -126,7 +125,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'deidentify' => array(
-              'path' => 'v1beta1/{+sourceDataset}:deidentify',
+              'path' => 'v1/{+sourceDataset}:deidentify',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'sourceDataset' => array(
@@ -136,7 +135,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -146,7 +145,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -156,7 +155,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'getIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'resource' => array(
@@ -170,7 +169,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+parent}/datasets',
+              'path' => 'v1/{+parent}/datasets',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -178,17 +177,17 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'pageToken' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
                 'pageSize' => array(
                   'location' => 'query',
                   'type' => 'integer',
                 ),
+                'pageToken' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
               ),
             ),'patch' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -202,7 +201,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'setIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -212,51 +211,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'testIamPermissions' => array(
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'resource' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),
-          )
-        )
-    );
-    $this->projects_locations_datasets_annotationStores = new Google_Service_CloudHealthcare_Resource_ProjectsLocationsDatasetsAnnotationStores(
-        $this,
-        $this->serviceName,
-        'annotationStores',
-        array(
-          'methods' => array(
-            'getIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'resource' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'options.requestedPolicyVersion' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-              ),
-            ),'setIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
-              'httpMethod' => 'POST',
-              'parameters' => array(
-                'resource' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'testIamPermissions' => array(
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -276,7 +231,7 @@ class Google_Service_CloudHealthcare extends Google_Service
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1beta1/{+parent}/dicomStores',
+              'path' => 'v1/{+parent}/dicomStores',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -290,7 +245,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'deidentify' => array(
-              'path' => 'v1beta1/{+sourceStore}:deidentify',
+              'path' => 'v1/{+sourceStore}:deidentify',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'sourceStore' => array(
@@ -300,7 +255,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -310,7 +265,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'export' => array(
-              'path' => 'v1beta1/{+name}:export',
+              'path' => 'v1/{+name}:export',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -320,7 +275,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -330,7 +285,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'getIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'resource' => array(
@@ -344,7 +299,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'import' => array(
-              'path' => 'v1beta1/{+name}:import',
+              'path' => 'v1/{+name}:import',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -354,17 +309,13 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+parent}/dicomStores',
+              'path' => 'v1/{+parent}/dicomStores',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
-                ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
                 ),
                 'filter' => array(
                   'location' => 'query',
@@ -374,9 +325,13 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
               ),
             ),'patch' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -390,7 +345,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'searchForInstances' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -405,7 +360,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'searchForSeries' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -420,7 +375,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'searchForStudies' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -435,7 +390,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'setIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -445,7 +400,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'storeInstances' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -460,7 +415,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'testIamPermissions' => array(
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -480,7 +435,7 @@ class Google_Service_CloudHealthcare extends Google_Service
         array(
           'methods' => array(
             'delete' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'parent' => array(
@@ -495,7 +450,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'retrieveMetadata' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -510,7 +465,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'retrieveStudy' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -525,7 +480,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'searchForInstances' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -540,7 +495,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'searchForSeries' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -555,7 +510,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'storeInstances' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -580,7 +535,7 @@ class Google_Service_CloudHealthcare extends Google_Service
         array(
           'methods' => array(
             'delete' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'parent' => array(
@@ -595,7 +550,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'retrieveMetadata' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -610,7 +565,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'retrieveSeries' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -625,7 +580,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'searchForInstances' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -650,7 +605,7 @@ class Google_Service_CloudHealthcare extends Google_Service
         array(
           'methods' => array(
             'delete' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'parent' => array(
@@ -665,7 +620,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'retrieveInstance' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -680,7 +635,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'retrieveMetadata' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -695,7 +650,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'retrieveRendered' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -720,7 +675,7 @@ class Google_Service_CloudHealthcare extends Google_Service
         array(
           'methods' => array(
             'retrieveFrames' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -735,7 +690,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'retrieveRendered' => array(
-              'path' => 'v1beta1/{+parent}/dicomWeb/{+dicomWebPath}',
+              'path' => 'v1/{+parent}/dicomWeb/{+dicomWebPath}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -760,7 +715,7 @@ class Google_Service_CloudHealthcare extends Google_Service
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1beta1/{+parent}/fhirStores',
+              'path' => 'v1/{+parent}/fhirStores',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -774,7 +729,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'deidentify' => array(
-              'path' => 'v1beta1/{+sourceStore}:deidentify',
+              'path' => 'v1/{+sourceStore}:deidentify',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'sourceStore' => array(
@@ -784,7 +739,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -794,7 +749,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'export' => array(
-              'path' => 'v1beta1/{+name}:export',
+              'path' => 'v1/{+name}:export',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -804,7 +759,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -814,7 +769,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'getIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'resource' => array(
@@ -828,7 +783,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'import' => array(
-              'path' => 'v1beta1/{+name}:import',
+              'path' => 'v1/{+name}:import',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -838,7 +793,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+parent}/fhirStores',
+              'path' => 'v1/{+parent}/fhirStores',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -860,7 +815,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -873,22 +828,8 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'type' => 'string',
                 ),
               ),
-            ),'search' => array(
-              'path' => 'v1beta1/{+parent}/fhir',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'parent' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'resourceType' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
-              ),
             ),'setIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -898,7 +839,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'testIamPermissions' => array(
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -917,18 +858,8 @@ class Google_Service_CloudHealthcare extends Google_Service
         'fhir',
         array(
           'methods' => array(
-            'Observation-lastn' => array(
-              'path' => 'v1beta1/{+parent}/fhir/Observation/$lastn',
-              'httpMethod' => 'GET',
-              'parameters' => array(
-                'parent' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'Patient-everything' => array(
-              'path' => 'v1beta1/{+name}/$everything',
+            'Patient-everything' => array(
+              'path' => 'v1/{+name}/$everything',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -940,11 +871,19 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                '_since' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
                 '_page_token' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
                 'end' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                '_type' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -954,7 +893,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'Resource-purge' => array(
-              'path' => 'v1beta1/{+name}/$purge',
+              'path' => 'v1/{+name}/$purge',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -964,7 +903,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'capabilities' => array(
-              'path' => 'v1beta1/{+name}/fhir/metadata',
+              'path' => 'v1/{+name}/fhir/metadata',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -973,53 +912,8 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'required' => true,
                 ),
               ),
-            ),'conditionalDelete' => array(
-              'path' => 'v1beta1/{+parent}/fhir/{+type}',
-              'httpMethod' => 'DELETE',
-              'parameters' => array(
-                'parent' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'type' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'conditionalPatch' => array(
-              'path' => 'v1beta1/{+parent}/fhir/{+type}',
-              'httpMethod' => 'PATCH',
-              'parameters' => array(
-                'parent' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'type' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
-            ),'conditionalUpdate' => array(
-              'path' => 'v1beta1/{+parent}/fhir/{+type}',
-              'httpMethod' => 'PUT',
-              'parameters' => array(
-                'parent' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-                'type' => array(
-                  'location' => 'path',
-                  'type' => 'string',
-                  'required' => true,
-                ),
-              ),
             ),'create' => array(
-              'path' => 'v1beta1/{+parent}/fhir/{+type}',
+              'path' => 'v1/{+parent}/fhir/{+type}',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -1034,7 +928,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -1044,7 +938,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'executeBundle' => array(
-              'path' => 'v1beta1/{+parent}/fhir',
+              'path' => 'v1/{+parent}/fhir',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -1054,7 +948,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'history' => array(
-              'path' => 'v1beta1/{+name}/_history',
+              'path' => 'v1/{+name}/_history',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -1066,6 +960,10 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
+                '_count' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
                 '_at' => array(
                   'location' => 'query',
                   'type' => 'string',
@@ -1074,13 +972,9 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                '_count' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
               ),
             ),'patch' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -1090,7 +984,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'read' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -1100,7 +994,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'search' => array(
-              'path' => 'v1beta1/{+parent}/fhir/_search',
+              'path' => 'v1/{+parent}/fhir/_search',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -1110,7 +1004,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'update' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PUT',
               'parameters' => array(
                 'name' => array(
@@ -1120,7 +1014,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'vread' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -1140,7 +1034,7 @@ class Google_Service_CloudHealthcare extends Google_Service
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1beta1/{+parent}/hl7V2Stores',
+              'path' => 'v1/{+parent}/hl7V2Stores',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -1154,7 +1048,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -1164,7 +1058,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -1174,7 +1068,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'getIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:getIamPolicy',
+              'path' => 'v1/{+resource}:getIamPolicy',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'resource' => array(
@@ -1188,7 +1082,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+parent}/hl7V2Stores',
+              'path' => 'v1/{+parent}/hl7V2Stores',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -1210,7 +1104,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'patch' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -1224,7 +1118,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'setIamPolicy' => array(
-              'path' => 'v1beta1/{+resource}:setIamPolicy',
+              'path' => 'v1/{+resource}:setIamPolicy',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -1234,7 +1128,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'testIamPermissions' => array(
-              'path' => 'v1beta1/{+resource}:testIamPermissions',
+              'path' => 'v1/{+resource}:testIamPermissions',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'resource' => array(
@@ -1254,7 +1148,7 @@ class Google_Service_CloudHealthcare extends Google_Service
         array(
           'methods' => array(
             'create' => array(
-              'path' => 'v1beta1/{+parent}/messages',
+              'path' => 'v1/{+parent}/messages',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -1264,7 +1158,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'delete' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'DELETE',
               'parameters' => array(
                 'name' => array(
@@ -1274,7 +1168,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -1288,7 +1182,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'ingest' => array(
-              'path' => 'v1beta1/{+parent}/messages:ingest',
+              'path' => 'v1/{+parent}/messages:ingest',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'parent' => array(
@@ -1298,7 +1192,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+parent}/messages',
+              'path' => 'v1/{+parent}/messages',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'parent' => array(
@@ -1306,11 +1200,19 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'type' => 'string',
                   'required' => true,
                 ),
-                'orderBy' => array(
+                'pageSize' => array(
+                  'location' => 'query',
+                  'type' => 'integer',
+                ),
+                'filter' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'filter' => array(
+                'view' => array(
+                  'location' => 'query',
+                  'type' => 'string',
+                ),
+                'orderBy' => array(
                   'location' => 'query',
                   'type' => 'string',
                 ),
@@ -1318,17 +1220,9 @@ class Google_Service_CloudHealthcare extends Google_Service
                   'location' => 'query',
                   'type' => 'string',
                 ),
-                'pageSize' => array(
-                  'location' => 'query',
-                  'type' => 'integer',
-                ),
-                'view' => array(
-                  'location' => 'query',
-                  'type' => 'string',
-                ),
               ),
             ),'patch' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'PATCH',
               'parameters' => array(
                 'name' => array(
@@ -1352,7 +1246,7 @@ class Google_Service_CloudHealthcare extends Google_Service
         array(
           'methods' => array(
             'cancel' => array(
-              'path' => 'v1beta1/{+name}:cancel',
+              'path' => 'v1/{+name}:cancel',
               'httpMethod' => 'POST',
               'parameters' => array(
                 'name' => array(
@@ -1362,7 +1256,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'get' => array(
-              'path' => 'v1beta1/{+name}',
+              'path' => 'v1/{+name}',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(
@@ -1372,7 +1266,7 @@ class Google_Service_CloudHealthcare extends Google_Service
                 ),
               ),
             ),'list' => array(
-              'path' => 'v1beta1/{+name}/operations',
+              'path' => 'v1/{+name}/operations',
               'httpMethod' => 'GET',
               'parameters' => array(
                 'name' => array(

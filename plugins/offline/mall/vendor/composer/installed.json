@@ -116,26 +116,26 @@
     },
     {
         "name": "clue/stream-filter",
-        "version": "v1.4.1",
-        "version_normalized": "1.4.1.0",
+        "version": "v1.5.0",
+        "version_normalized": "1.5.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/clue/php-stream-filter.git",
-            "reference": "5a58cc30a8bd6a4eb8f856adf61dd3e013f53f71"
+            "reference": "aeb7d8ea49c7963d3b581378955dbf5bc49aa320"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/clue/php-stream-filter/zipball/5a58cc30a8bd6a4eb8f856adf61dd3e013f53f71",
-            "reference": "5a58cc30a8bd6a4eb8f856adf61dd3e013f53f71",
+            "url": "https://api.github.com/repos/clue/php-stream-filter/zipball/aeb7d8ea49c7963d3b581378955dbf5bc49aa320",
+            "reference": "aeb7d8ea49c7963d3b581378955dbf5bc49aa320",
             "shasum": ""
         },
         "require": {
             "php": ">=5.3"
         },
         "require-dev": {
-            "phpunit/phpunit": "^5.0 || ^4.8"
+            "phpunit/phpunit": "^9.3 || ^5.7 || ^4.8.36"
         },
-        "time": "2019-04-09T12:31:48+00:00",
+        "time": "2020-10-02T12:38:20+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -153,7 +153,7 @@
         "authors": [
             {
                 "name": "Christian Lück",
-                "email": "christian@lueck.tv"
+                "email": "christian@clue.engineering"
             }
         ],
         "description": "A simple and modern approach to stream filtering in PHP",
@@ -556,26 +556,26 @@
     },
     {
         "name": "guzzlehttp/promises",
-        "version": "v1.3.1",
-        "version_normalized": "1.3.1.0",
+        "version": "1.4.0",
+        "version_normalized": "1.4.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/guzzle/promises.git",
-            "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646"
+            "reference": "60d379c243457e073cff02bc323a2a86cb355631"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
-            "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
+            "url": "https://api.github.com/repos/guzzle/promises/zipball/60d379c243457e073cff02bc323a2a86cb355631",
+            "reference": "60d379c243457e073cff02bc323a2a86cb355631",
             "shasum": ""
         },
         "require": {
-            "php": ">=5.5.0"
+            "php": ">=5.5"
         },
         "require-dev": {
-            "phpunit/phpunit": "^4.0"
+            "symfony/phpunit-bridge": "^4.4 || ^5.1"
         },
-        "time": "2016-12-20T10:07:11+00:00",
+        "time": "2020-09-30T07:37:28+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -609,17 +609,17 @@
     },
     {
         "name": "guzzlehttp/psr7",
-        "version": "1.6.1",
-        "version_normalized": "1.6.1.0",
+        "version": "1.7.0",
+        "version_normalized": "1.7.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/guzzle/psr7.git",
-            "reference": "239400de7a173fe9901b9ac7c06497751f00727a"
+            "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/psr7/zipball/239400de7a173fe9901b9ac7c06497751f00727a",
-            "reference": "239400de7a173fe9901b9ac7c06497751f00727a",
+            "url": "https://api.github.com/repos/guzzle/psr7/zipball/53330f47520498c0ae1f61f7e2c90f55690c06a3",
+            "reference": "53330f47520498c0ae1f61f7e2c90f55690c06a3",
             "shasum": ""
         },
         "require": {
@@ -632,16 +632,16 @@
         },
         "require-dev": {
             "ext-zlib": "*",
-            "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.8"
+            "phpunit/phpunit": "~4.8.36 || ^5.7.27 || ^6.5.14 || ^7.5.20 || ^8.5.8 || ^9.3.10"
         },
         "suggest": {
-            "zendframework/zend-httphandlerrunner": "Emit PSR-7 responses"
+            "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
         },
-        "time": "2019-07-01T23:21:34+00:00",
+        "time": "2020-09-30T07:37:11+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "1.6-dev"
+                "dev-master": "1.7-dev"
             }
         },
         "installation-source": "dist",
@@ -1250,21 +1250,21 @@
     },
     {
         "name": "paragonie/random_compat",
-        "version": "v9.99.99",
-        "version_normalized": "9.99.99.0",
+        "version": "v9.99.100",
+        "version_normalized": "9.99.100.0",
         "source": {
             "type": "git",
             "url": "https://github.com/paragonie/random_compat.git",
-            "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95"
+            "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/paragonie/random_compat/zipball/84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
-            "reference": "84b4dfb120c6f9b4ff7b3685f9b8f1aa365a0c95",
+            "url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
+            "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
             "shasum": ""
         },
         "require": {
-            "php": "^7"
+            "php": ">= 7"
         },
         "require-dev": {
             "phpunit/phpunit": "4.*|5.*",
@@ -1273,7 +1273,7 @@
         "suggest": {
             "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
         },
-        "time": "2018-07-02T15:55:56+00:00",
+        "time": "2020-10-15T08:29:30+00:00",
         "type": "library",
         "installation-source": "dist",
         "notification-url": "https://packagist.org/downloads/",
@@ -1378,17 +1378,17 @@
     },
     {
         "name": "php-http/discovery",
-        "version": "1.10.0",
-        "version_normalized": "1.10.0.0",
+        "version": "1.12.0",
+        "version_normalized": "1.12.0.0",
         "source": {
             "type": "git",
             "url": "https://github.com/php-http/discovery.git",
-            "reference": "88ff14cad4a0db68b343260fa7ac3f1599703660"
+            "reference": "4366bf1bc39b663aa87459bd725501d2f1988b6c"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/php-http/discovery/zipball/88ff14cad4a0db68b343260fa7ac3f1599703660",
-            "reference": "88ff14cad4a0db68b343260fa7ac3f1599703660",
+            "url": "https://api.github.com/repos/php-http/discovery/zipball/4366bf1bc39b663aa87459bd725501d2f1988b6c",
+            "reference": "4366bf1bc39b663aa87459bd725501d2f1988b6c",
             "shasum": ""
         },
         "require": {
@@ -1408,7 +1408,7 @@
             "php-http/message": "Allow to use Guzzle, Diactoros or Slim Framework factories",
             "puli/composer-plugin": "Sets up Puli which is recommended for Discovery to work. Check http://docs.php-http.org/en/latest/discovery.html for more details."
         },
-        "time": "2020-09-04T08:41:23+00:00",
+        "time": "2020-09-22T13:31:04+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -1570,17 +1570,17 @@
     },
     {
         "name": "php-http/message",
-        "version": "1.9.0",
-        "version_normalized": "1.9.0.0",
+        "version": "1.9.1",
+        "version_normalized": "1.9.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/php-http/message.git",
-            "reference": "2c7256e3c1aba0bfca70f099810f1c7712e00945"
+            "reference": "09f3f13af3a1a4273ecbf8e6b27248c002a3db29"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/php-http/message/zipball/2c7256e3c1aba0bfca70f099810f1c7712e00945",
-            "reference": "2c7256e3c1aba0bfca70f099810f1c7712e00945",
+            "url": "https://api.github.com/repos/php-http/message/zipball/09f3f13af3a1a4273ecbf8e6b27248c002a3db29",
+            "reference": "09f3f13af3a1a4273ecbf8e6b27248c002a3db29",
             "shasum": ""
         },
         "require": {
@@ -1609,7 +1609,7 @@
             "slim/slim": "Used with Slim Framework PSR-7 implementation",
             "zendframework/zend-diactoros": "Used with Diactoros Factories"
         },
-        "time": "2020-08-17T06:33:14+00:00",
+        "time": "2020-10-13T06:21:08+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -2041,27 +2041,28 @@
     },
     {
         "name": "sabre/uri",
-        "version": "2.2.0",
-        "version_normalized": "2.2.0.0",
+        "version": "2.2.1",
+        "version_normalized": "2.2.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sabre-io/uri.git",
-            "reference": "059d11012603be2e32ddb7543602965563ddbb09"
+            "reference": "f502edffafea8d746825bd5f0b923a60fd2715ff"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sabre-io/uri/zipball/059d11012603be2e32ddb7543602965563ddbb09",
-            "reference": "059d11012603be2e32ddb7543602965563ddbb09",
+            "url": "https://api.github.com/repos/sabre-io/uri/zipball/f502edffafea8d746825bd5f0b923a60fd2715ff",
+            "reference": "f502edffafea8d746825bd5f0b923a60fd2715ff",
             "shasum": ""
         },
         "require": {
-            "php": "^7.1"
+            "php": "^7.1 || ^8.0"
         },
         "require-dev": {
             "friendsofphp/php-cs-fixer": "~2.16.1",
-            "phpunit/phpunit": "^7 || ^8"
+            "phpstan/phpstan": "^0.12",
+            "phpunit/phpunit": "^7.5 || ^8.5 || ^9.0"
         },
-        "time": "2020-01-31T18:53:43+00:00",
+        "time": "2020-10-03T10:33:23+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -2094,17 +2095,17 @@
     },
     {
         "name": "sabre/xml",
-        "version": "2.2.1",
-        "version_normalized": "2.2.1.0",
+        "version": "2.2.3",
+        "version_normalized": "2.2.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/sabre-io/xml.git",
-            "reference": "41c6ba148966b10cafd31d1a4e5feb1e2138d95c"
+            "reference": "c3b959f821c19b36952ec4a595edd695c216bfc6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sabre-io/xml/zipball/41c6ba148966b10cafd31d1a4e5feb1e2138d95c",
-            "reference": "41c6ba148966b10cafd31d1a4e5feb1e2138d95c",
+            "url": "https://api.github.com/repos/sabre-io/xml/zipball/c3b959f821c19b36952ec4a595edd695c216bfc6",
+            "reference": "c3b959f821c19b36952ec4a595edd695c216bfc6",
             "shasum": ""
         },
         "require": {
@@ -2112,7 +2113,7 @@
             "ext-xmlreader": "*",
             "ext-xmlwriter": "*",
             "lib-libxml": ">=2.6.20",
-            "php": "^7.1",
+            "php": "^7.1 || ^8.0",
             "sabre/uri": ">=1.0,<3.0.0"
         },
         "require-dev": {
@@ -2120,7 +2121,7 @@
             "phpstan/phpstan": "^0.12",
             "phpunit/phpunit": "^7.5 || ^8.5 || ^9.0"
         },
-        "time": "2020-05-11T09:44:55+00:00",
+        "time": "2020-10-03T10:08:14+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -2212,17 +2213,17 @@
     },
     {
         "name": "symfony/http-foundation",
-        "version": "v5.1.5",
-        "version_normalized": "5.1.5.0",
+        "version": "v5.1.7",
+        "version_normalized": "5.1.7.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/http-foundation.git",
-            "reference": "41a4647f12870e9d41d9a7d72ff0614a27208558"
+            "reference": "353b42e7b4fd1c898aab09a059466c9cea74039b"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/41a4647f12870e9d41d9a7d72ff0614a27208558",
-            "reference": "41a4647f12870e9d41d9a7d72ff0614a27208558",
+            "url": "https://api.github.com/repos/symfony/http-foundation/zipball/353b42e7b4fd1c898aab09a059466c9cea74039b",
+            "reference": "353b42e7b4fd1c898aab09a059466c9cea74039b",
             "shasum": ""
         },
         "require": {
@@ -2240,7 +2241,7 @@
         "suggest": {
             "symfony/mime": "To use the file extension guesser"
         },
-        "time": "2020-08-17T07:48:54+00:00",
+        "time": "2020-09-27T14:14:57+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {

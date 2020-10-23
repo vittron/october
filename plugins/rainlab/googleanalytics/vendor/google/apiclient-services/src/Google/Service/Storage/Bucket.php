@@ -17,10 +17,7 @@
 
 class Google_Service_Storage_Bucket extends Google_Collection
 {
-  protected $collection_key = 'zone_affinity';
-  protected $internal_gapi_mappings = array(
-        "zoneAffinity" => "zone_affinity",
-  );
+  protected $collection_key = 'zoneAffinity';
   protected $aclType = 'Google_Service_Storage_BucketAccessControl';
   protected $aclDataType = 'array';
   protected $billingType = 'Google_Service_Storage_BucketBilling';

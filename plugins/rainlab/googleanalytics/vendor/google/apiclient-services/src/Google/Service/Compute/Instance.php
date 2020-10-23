@@ -19,6 +19,8 @@ class Google_Service_Compute_Instance extends Google_Collection
 {
   protected $collection_key = 'serviceAccounts';
   public $canIpForward;
+  protected $confidentialInstanceConfigType = 'Google_Service_Compute_ConfidentialInstanceConfig';
+  protected $confidentialInstanceConfigDataType = '';
   public $cpuPlatform;
   public $creationTimestamp;
   public $deletionProtection;
@@ -42,6 +44,7 @@ class Google_Service_Compute_Instance extends Google_Collection
   public $name;
   protected $networkInterfacesType = 'Google_Service_Compute_NetworkInterface';
   protected $networkInterfacesDataType = 'array';
+  public $privateIpv6GoogleAccess;
   protected $reservationAffinityType = 'Google_Service_Compute_ReservationAffinity';
   protected $reservationAffinityDataType = '';
   public $resourcePolicies;
@@ -68,6 +71,20 @@ class Google_Service_Compute_Instance extends Google_Collection
   public function getCanIpForward()
   {
     return $this->canIpForward;
+  }
+  /**
+   * @param Google_Service_Compute_ConfidentialInstanceConfig
+   */
+  public function setConfidentialInstanceConfig(Google_Service_Compute_ConfidentialInstanceConfig $confidentialInstanceConfig)
+  {
+    $this->confidentialInstanceConfig = $confidentialInstanceConfig;
+  }
+  /**
+   * @return Google_Service_Compute_ConfidentialInstanceConfig
+   */
+  public function getConfidentialInstanceConfig()
+  {
+    return $this->confidentialInstanceConfig;
   }
   public function setCpuPlatform($cpuPlatform)
   {
@@ -242,6 +259,14 @@ class Google_Service_Compute_Instance extends Google_Collection
   public function getNetworkInterfaces()
   {
     return $this->networkInterfaces;
+  }
+  public function setPrivateIpv6GoogleAccess($privateIpv6GoogleAccess)
+  {
+    $this->privateIpv6GoogleAccess = $privateIpv6GoogleAccess;
+  }
+  public function getPrivateIpv6GoogleAccess()
+  {
+    return $this->privateIpv6GoogleAccess;
   }
   /**
    * @param Google_Service_Compute_ReservationAffinity
