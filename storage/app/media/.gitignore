@@ -2,4 +2,4 @@
 !.gitignore
 !uploaded-files/
 !uploaded-files/*
-!frontpage_bg.jpg
+!frontpage*.jpg

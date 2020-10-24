@@ -7,6 +7,10 @@ body {
     height: 93%;
 }
 
+.hm-black-light {
+    background: url(/storage/app/media/frontpage_bg.jpg) no-repeat center center fixed;
+}
+
 .hm-black-light .full-bg-img,
 .hm-black-light .mask {
     background-color: inherit;
@@ -27,6 +31,16 @@ body {
     text-align: center;
 }
 
+.benefits .card {
+    background-color: #fefcf9;
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .hm-black-light {
+        background-image: url(/storage/app/media/frontpage_bg_1280.jpg);
+    }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 992px) {
     .greeting p {
         font-size: 0.9rem;
@@ -37,8 +51,20 @@ body {
     .greeting .emphasis.big {
         font-size: 1rem;
     }
+    
+    .hm-black-light {
+        background-image: url(/storage/app/media/frontpage_bg_1000.jpg);
+    }
 }
 
-.benefits .card {
-    background-color: #fefcf9;
+@media only screen and (max-width: 768px) {
+    .hm-black-light {
+        background-image: url(/storage/app/media/frontpage_bg_770.jpg);
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    .hm-black-light {
+        background-image: url(/storage/app/media/frontpage_bg_small_vert.jpg);
+    }
 }
