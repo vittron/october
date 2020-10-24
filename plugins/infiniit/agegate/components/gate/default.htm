@@ -2,9 +2,15 @@
     window.addEventListener('load', function () {
     new Agegate({
                 cookie: "popup_agreed",
-                body: "{{'Are you 18 or older?'|_}}",
-                yesButton: "{{'Yes'|_}}",
-                noButton: "{{'No'|_}}",
+                body: "<div class=\"text-center\">" +
+                        "<img src=\"/storage/app/media/uploaded-files/big_logo.jpg\">" +
+                      "</div>" +
+                      "<p class=\"text-center mt-3\">" +
+                        "<span class=\"text-danger\"><strong>УВАГА!</strong></span> " +
+                          "Сайт містить інформацію, не рекомендовану для осіб, які не досягли повноліття. Вам вже виповнилося 18 років?" +
+                      "</p>",
+                yesButton: "Так",
+                noButton: "Ні",
                 cancelUrl: "{{ __SELF__.property('cancelUrl') }}",
                 expires: {{ __SELF__.property('cookie') }},
                 success: function() {},
