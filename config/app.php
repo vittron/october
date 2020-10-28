@@ -127,6 +127,7 @@ return [
         // 'Illuminate\Html\HtmlServiceProvider', // Example
 
         'System\ServiceProvider',
+        'Webup\LaravelSendinBlue\SendinBlueServiceProvider',
     ]),
 
     /*
