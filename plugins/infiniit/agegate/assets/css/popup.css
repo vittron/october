@@ -1,6 +1,10 @@
 /* AgeGate Popup Container Styles */
 
-.popup-container {
+  .popup-modal {
+    overflow-y: auto;
+  }
+
+  .popup-container {
     box-sizing: border-box;
     position: relative;
     width: 100%;
