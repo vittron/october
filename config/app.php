@@ -128,6 +128,7 @@ return [
 
         'System\ServiceProvider',
         'Webup\LaravelSendinBlue\SendinBlueServiceProvider',
+        'Clockwork\Support\Laravel\ClockworkServiceProvider',
     ]),
 
     /*
