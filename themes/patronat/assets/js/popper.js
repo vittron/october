@@ -333,7 +333,7 @@
         var sideA = axis === 'x' ? 'Left' : 'Top';
         var sideB = sideA === 'Left' ? 'Right' : 'Bottom';
 
-        return +styles['border' + sideA + 'Width'].split('px')[0] + +styles['border' + sideB + 'Width'].split('px')[0];
+        return +styles['border' + sideA + 'Width'].split('px')[0] + (+styles['border' + sideB + 'Width'].split('px')[0]);
     }
 
     function getWindowSizes() {
