@@ -1,0 +1,75 @@
+title = "Product"
+url = "/product/:slug/:variant?"
+layout = "noSidebar"
+is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeUrl[en] = "/product/:slug/:variant?"
+
+[product]
+product = ":slug"
+variant = ":slug"
+redirectOnPropertyChange = 0
+currentVariantReviewsOnly = 0
+
+[products relatedProducts]
+filterComponent = "productsFilter"
+setPageTitle = 0
+includeVariants = 1
+includeChildren = 0
+perPage = 4
+paginate = 0
+sort = "random"
+
+[wishlistButton]
+
+[mallDependencies]
+==
+<?php
+use OFFLINE\Mall\Models\Category;
+
+function onStart() {
+    // Fetch the category from the product component.
+    $productComponent = $this->findComponentByName('product');
+    $item = optional($productComponent)->item;
+    if (!$item) {
+        return;
+    }
+    $category = optional($item->categories)->first();
+    if (!$category) {
+        return;
+    }
+    // If a category is available, use it for the products component.
+    $this->findComponentByName('relatedProducts')->category = $category;
+}
+?>
+==
+{% component 'product' %}
+<div class="row">
+    <div class="col-12">
+        <h2 class='my-4 mx-2 mx-md-4'>{{ 'offline.mall::frontend.other_products' | trans }}</h2>
+    </div>
+</div>
+
+{% component 'relatedProducts' %}
+
+{% put styles %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.2/jquery.fancybox.min.css">
+{% endput %}
+
+{% put scripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.4.2/jquery.fancybox.min.js"></script>
+    <script>
+        $(function () {
+            $('[data-fancybox="product"]').fancybox({
+                loop: true
+            });
+        })
+    </script>
+{% endput %}

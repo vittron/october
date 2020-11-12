@@ -1,0 +1,15 @@
+{% put scripts %}
+    <script>
+        $(function () {
+            var $body = $('body');
+            $('.mall-products-filter:hidden').remove();
+            $body.off('click', '.js-mall-filter');
+            $body.on('click', '.js-mall-filter', function (e) {
+                var $input = $(this).find('input');
+                if (e.target.tagName == 'INPUT') {
+                    $('.mall-products-filter').trigger('submit');
+                }
+            });
+        });   
+    </script>
+{% endput %}

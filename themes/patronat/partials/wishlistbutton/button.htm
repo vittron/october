@@ -1,0 +1,16 @@
+<button class="btn btn-outline-info btn-block waves-effect mall-add-to-wishlist-button">
+    {{ 'offline.mall::frontend.wishlist.add' | trans }}
+</button>
+<script>
+    var $buttons = $(document).find('.mall-add-to-wishlist-button')
+    console.log($buttons)
+    if ($buttons.length) {
+        $buttons.on('click', function (e) {
+            e.preventDefault()
+            var $popup = $(this).parents('.mall-wishlist-button').find('.mall-wishlist-button__popup')
+            if ($popup) {
+                $popup.toggleClass('mall-wishlist-button__popup--visible')
+            }
+        })
+    }
+</script>

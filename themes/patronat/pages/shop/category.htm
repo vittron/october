@@ -1,0 +1,55 @@
+title = "Category"
+url = "/category/:slug*"
+layout = "noSidebar"
+is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeUrl[en] = "/category/:slug*"
+
+[products]
+category = ":slug"
+filterComponent = "productsFilter"
+setPageTitle = 1
+includeVariants = 1
+includeChildren = 1
+perPage = 9
+paginate = 1
+
+[productsFilter]
+category = ":slug"
+includeChildren = 1
+showPriceFilter = 1
+showBrandFilter = 0
+showOnSaleFilter = 1
+includeSliderAssets = 1
+
+[productsFilter productsFilterNarrow]
+category = ":slug"
+includeChildren = 1
+showPriceFilter = 1
+showBrandFilter = 0
+showOnSaleFilter = 0
+includeSliderAssets = 0
+
+[mallDependencies]
+==
+<div class="category-page row">
+    <div class="col-lg-3 d-none d-lg-block">
+        {% component 'productsFilter' %}
+    </div>
+    <div class="col-lg-9">
+        <h1 class="pl-lg-4 pl-3 pb-3">{{ products.category.name }}</h1>
+        
+        <div class="col-12 d-lg-none">
+            {% component 'productsFilterNarrow' %}
+        </div>
+
+        {% component 'products' %}
+    </div>
+</div>

@@ -1,0 +1,27 @@
+title = "Search results"
+url = "/search"
+layout = "noSidebar"
+is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[viewBag]
+localeUrl[en] = "/search"
+
+[searchResults]
+resultsPerPage = 8
+showProviderBadge = 1
+noResultsMessage = "Your search returned no results."
+visitPageMessage = "Visit page"
+==
+<div class="w-3/4 m-auto">
+    <h2 class="mb-8">{{ 'offline.mall::frontend.search.heading' | trans({query: searchResults.query}) | escape }}</h2>
+
+    <div class="pt-8">
+        {% component 'searchResults' %}
+    </div>
+</div>

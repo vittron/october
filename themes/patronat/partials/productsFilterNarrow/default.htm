@@ -1,0 +1,9 @@
+<form class="mall-products-filter row">
+    <div class="col-6">
+        {% partial __SELF__ ~ '::sorter' %}
+    </div>
+    <div class="col-6">
+        {% partial __SELF__ ~ '::propertygroups' groups=__SELF__.propertyGroups %}
+    </div>
+</form>
+{% partial __SELF__ ~ '::scripts' %}
