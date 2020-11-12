@@ -36,7 +36,7 @@ return [
     |
     */
 
-    'backendUri' => 'backend',
+    'backendUri' => 'happyend',
 
     /*
     |--------------------------------------------------------------------------
@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'backendForceRemember' => true,
+    'backendForceRemember' => false,
 
     /*
     |--------------------------------------------------------------------------

@@ -44,7 +44,6 @@
     RewriteCond %{REQUEST_FILENAME} !/favicon.ico
     RewriteCond %{REQUEST_FILENAME} !/robots.txt
     RewriteRule !^index.php index.php [L,NC]
-    
 
     ##
     ## Block all PHP files, except index
