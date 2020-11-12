@@ -4,7 +4,7 @@ body {
 }
 
 .view {
-    height: 93%;
+    height: 93vh;
 }
 
 .hm-black-light {
@@ -15,6 +15,7 @@ body {
 .hm-black-light .mask {
     background-color: inherit;
     background-color: rgba(0, 0, 0, .1);
+    height: 100vh;
 }
 
 .full-bg-img .tagline {

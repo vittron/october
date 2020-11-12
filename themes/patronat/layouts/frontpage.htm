@@ -31,9 +31,7 @@ function onStart()
 
 {variable name="introTitle" label="Intro Title" tab="Intro" type="text"}{/variable}
 {variable name="tagline" label="Tagline" tab="Intro" type="text"}{/variable}
-{variable name="bgImage" label="Background Image" tab="Intro" type="mediafinder" mode="image"}{/variable}
 
-{% set bg = bgImage %}
 <main>
     <article>
         <!--Mask-->
@@ -43,7 +41,7 @@ function onStart()
                     <li>
                         <h1 class="display-3 mb-4 font-bold">{{ introTitle }}</h1></li>
                     <li>
-                        <h2 class="mb-5 tagline">{{ tagline }}</h3>
+                        <h2 class="mb-5 tagline">{{ tagline }}</h2>
                     </li>
                 </ul>
             </div>

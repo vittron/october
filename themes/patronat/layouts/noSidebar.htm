@@ -17,6 +17,13 @@ linkTarget = "_blank"
 formCode = "question_form"
 
 [googleTracker]
+
+[session]
+security = "all"
+
+[enhancedEcommerceAnalytics]
+
+[mallDependencies]
 ==
 <?php
 function onStart()
@@ -29,9 +36,9 @@ function onStart()
 {% partial 'site/head' %}
 {% partial 'site/scrollingNavbar' mainLayout="no-sidebar" %}
 
-<div class="container py-5">
-    <main>
-        <article>
+<div class="container pt-5 pb-3">
+    <main class="pt-3">
+        <article class="py-5">
             {% page %}
         </article>
     </main>
