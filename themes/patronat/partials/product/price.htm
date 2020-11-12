@@ -1,0 +1,16 @@
+{% set price = price|default(item.price()) %}
+{% set oldPrice = item.oldPrice().integer %}
+
+{% if price.official or oldPrice %}
+    <div class="mall-product__old-price">
+        {% if price.official %}
+            {{ price.official.string | raw }}
+        {% else %}
+            <span class="crossed">{{ item.oldPrice().string | raw }}</span>
+            <span class="discount-percent">({{ ((price.integer / oldPrice - 1) * 100) | round(1) }}%)</span>
+        {% endif %}
+    </div>
+{% endif %}
+<div class="mall-product__current-price{{ item.oldPrice().integer ? ' discount' }}">
+    {% partial __SELF__ ~ '::currentprice' price=price.string %}
+</div>

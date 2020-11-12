@@ -1,0 +1,44 @@
+<div class="mall-products-item">
+    <a href="{{ productPage|page({slug: item.slug, variant: item.variantHashId}) }}"
+       data-mall-item-id="{{ item.prefixedId }}"
+    >
+        <div class="mall-products-item__image">
+            {% partial __SELF__ ~ '::image' image=item.image %}
+        </div>
+        <div class="mall-products-item__info">
+            <div class="mall-products-item__info-primary pt-3" title="{{ item.name }}">
+                <div class="mall-products-item__name">
+                    {{ item.name }}
+                </div>
+            </div>
+            <div class="mall-products-item__info-secondary py-1">
+                <div class="mall-products-item__short-description" title="{{ item.description_short | nl2br }}">
+                    {{ item.description_short | nl2br }}
+                </div>
+            </div>
+            <div class="mall-products-item__info-teritary">
+                {% set rating = item.reviews_rating %}
+                {# To display the product's rating use: #}
+                {# set rating = item.product.reviews_rating #}
+                {% if rating > 0 %}
+                    <div class="mall-products-item__stars">
+                        {% partial __SELF__ ~ '::stars' rating=rating %}
+                    </div>
+                {% endif %}
+            </div>
+            <div class="mall-products-item__old-price">
+                {% if price.official %}
+                    {{ price.official.string | raw }}
+                {% else %}
+                    {{ item.oldPrice.count > 0 ? item.oldPrice().string | raw }}
+                {% endif %}
+            </div>
+            {% set price = item.price() %}
+            <div class="mall-products-item__price
+                {{ price.isCustomerSpecific ? 'mall-products-item__price--special' }}
+                {{ item.oldPrice.count > 0 ? 'mall-products-item__price--discount' }}">
+                {{ price.string | raw }}
+            </div>
+        </div>
+    </a>
+</div>

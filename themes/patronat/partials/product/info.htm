@@ -1,0 +1,25 @@
+<h1 class="mall-product__name">{{ item.name }}</h1>
+
+{% partial __SELF__ ~ '::images' images=item.all_images %}
+
+{% if item.description_short %}
+    <h2 class="mall-product__description-short h5">{{ item.description_short | nl2br }}</h2>
+{% endif %}
+
+<div class="col-md-12 d-md-none mb-3 horizontal-cart">
+    {% partial __SELF__ ~ '::horizontalcart' horizontalId=1 %}
+</div>
+
+<div class="mall-product__description">
+    {{ item.description | raw }}
+</div>
+
+{% partial __SELF__ ~ '::propertyvalues' images=item.all_images %}
+
+{% if __SELF__.showReviews %}
+    {% component 'productReviews' %}
+{% endif %}
+
+<div class="col-12 mb-3 horizontal-cart">
+    {% partial __SELF__ ~ '::horizontalcart' horizontalId=2 %}
+</div>
