@@ -238,6 +238,10 @@ footer.page-footer .footer-copyright {
     box-sizing: border-box;
 }
 
+.mall-product__image {
+    border-color: #fceb9d;
+}
+
 .horizontal-cart {
     border-top-width: 1px;
     border-color: #f1f6f8;
@@ -261,6 +265,47 @@ footer.page-footer .footer-copyright {
     color: #582841;
 }
 
+.mall-cart__header th,
+.mall-selectbox-sm,
+.mall-cart__grand-total td,
+.mall-cart__total td,
+.mall-cart__empty {
+    background-color: #fefcf9;
+    color: #582841;
+}
+
+.mall-cart__wrapper,
+.mall-cart__table tbody td,
+.mall-cart__table tbody td:first-child,
+.mall-cart__table tfoot td,
+.mall-cart__table th,
+.mall-cart__table tr {
+    border-color: #fceb9d;
+}
+
+.mall-cart__table tbody  td {
+    font-size: 0.9rem;
+}
+
+.mall-cart__table td .js-mall-remove-product {
+    font-size: 0.75rem;
+}
+
+.mall-cart__table td:first-child {
+    min-width: 4rem;
+}
+
+.mall-discount-applier .mall-form-control {
+    width: auto;
+    padding-right: 1rem;
+}
+
+.mall-discount-applier input {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    height: 3rem;
+}
+
 @media only screen and (max-width: 992px) {
     .mall-products {
         padding-left: 0;
@@ -269,6 +314,10 @@ footer.page-footer .footer-copyright {
     .mall-products-filter {
         padding-right: 0;
     }
+
+    .mall-discount-applier form {
+        width: 70%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -276,6 +325,10 @@ footer.page-footer .footer-copyright {
         width: 50%;
         padding-left: 0.7rem;
         padding-right: 0.7rem;
+    }
+    
+    .mall-discount-applier form {
+        width: 100%;
     }
 }
     
