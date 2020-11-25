@@ -1,0 +1,15 @@
+name = "Payment state"
+==
+{% if order.isPaid %}
+    {{ 'offline.mall::mail.order.partials.has_been_paid_on' | trans() }} {{ order.payment_log.created_at }}.
+{% else %}
+    {% if order.payment_method.code == 'peredplata' %}
+        {{ 'offline.mall::mail.order.partials.currently_pending' | trans() }}<br>
+        <b>{{ config_get('vittron.mallplus::recipient.card') }}</b><br>
+        <b>{{ config_get('vittron.mallplus::recipient.name') }}</b>.
+    {% else %}
+        {{ 'offline.mall::mail.order.partials.payment_on_delivery' | trans() }}.
+    {% endif %}
+
+    {{ order.payment_method.renderInstructions(order)  | raw }}
+{% endif %}

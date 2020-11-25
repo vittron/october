@@ -1,0 +1,17 @@
+subject = "{{ 'offline.mall::mail.payment.paid.subject' | trans() }}"
+description = "Sent when a payment for an order succeeded"
+==
+
+{{ 'offline.mall::mail.common.hello' | trans({firstname: order.customer.firstname, lastname: order.customer.lastname}) }}
+
+{{ 'offline.mall::mail.payment.paid.message' | trans({number: order.order_number}) }}
+
+{% if order.payment_method.code == 'peredplata' %}
+    {{ 'offline.mall::mail.payment.paid.process_order' | trans() }}
+{% else %}
+    {{ 'offline.mall::mail.payment.paid.bon_appetit' | trans() }}
+{% endif %}
+
+{% partial 'button' url=account_url type='primary' body %}
+    {{ 'offline.mall::mail.common.view_order_status_online' | trans() }}
+{% endpartial %}

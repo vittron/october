@@ -1,0 +1,10 @@
+name = "Address"
+==
+<p>
+    {% if address.company %}
+        {{ address.company }}<br />
+    {% endif %}
+    Отримувач: <b>{{ address.name }}</b><br />
+    Відділення НП або адреса доставки: <b>{{ address.lines | nl2br }}</b><br />
+    Місто: <b>{{ address.city }}</b><br />  
+</p>

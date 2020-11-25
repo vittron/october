@@ -1,0 +1,19 @@
+name = "Addresses"
+==
+## {{ order.shipping_address_same_as_billing
+? ('offline.mall::mail.order.partials.billing_and_shipping' | trans())
+: ('offline.mall::mail.order.partials.billing_address' | trans()) }}:
+
+{% partial 'mallplus.customer.address' address=order.billing_address %}
+
+{% if not order.shipping_address_same_as_billing %}
+    ## {{ 'offline.mall::mail.order.partials.shipping_address' | trans() }}
+    {% partial 'mallplus.customer.address' address=order.shipping_address %}
+{% endif %}
+<p>
+    Телефон: <b>{{ order.customer.user.phone }}</b>
+    {% if order.customer_notes %}
+        <br>Особливі побажання:<br>
+        <b>{{ order.customer_notes | nl2br }}</b>
+    {% endif %}
+</p>

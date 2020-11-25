@@ -6,6 +6,74 @@
 </head>
 <body>
 <style>
+
+body {
+    background-color: #fefcf9;
+    color: #582841;
+    height: 100%;
+    hyphens: auto;
+    line-height: 1.4;
+    margin: 0;
+    -moz-hyphens: auto;
+    -ms-word-break: break-all;
+    width: 100% !important;
+    -webkit-hyphens: auto;
+    -webkit-text-size-adjust: none;
+    word-break: break-all;
+    word-break: break-word;
+}
+h1 {
+    color: #582841;
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: left;
+}
+
+h2 {
+    color: #582841;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: left;
+}
+
+h3 {
+    color: #582841;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: left;
+}
+
+p {
+    color: #582841;
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-top: 0;
+    text-align: left;
+}
+
+p.sub {
+    font-size: 12px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Layout */
+
+.wrapper {
+    background-color: #fefcf9;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    -premailer-cellpadding: 0;
+    -premailer-cellspacing: 0;
+    -premailer-width: 100%;
+}
+
 @media only screen and (max-width: 600px) {
 .inner-body {
 width: 100% !important;
