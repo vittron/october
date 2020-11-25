@@ -1,12 +1,24 @@
-title = "Wishlists"
+title = "Список бажань"
 url = "/wishlists"
-layout = "default"
+layout = "noSidebar"
 is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+robot_index = "index"
+robot_follow = "follow"
 
 [viewBag]
 localeUrl[de] = "/wunschlisten"
 
 [wishlists]
 showShipping = 1
+
+[cart]
+showDiscountApplier = 1
+showTaxes = 1
+showShipping = 1
+showProceedToCheckoutButton = 0
 ==
 {% component 'wishlists' %}

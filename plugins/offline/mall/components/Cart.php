@@ -8,8 +8,6 @@ use OFFLINE\Mall\Models\Cart as CartModel;
 use OFFLINE\Mall\Models\CartProduct;
 use OFFLINE\Mall\Models\GeneralSettings;
 use OFFLINE\Mall\Models\ShippingMethod;
-use Request;
-use Session;
 
 /**
  * The Cart component displays a user's cart.
