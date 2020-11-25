@@ -1,0 +1,18 @@
+<div class="mall-checkout__payment-method">
+    <div class="mall-form-control" style="margin: 0">
+        <label>{{ 'offline.mall::frontend.form.payment_method' | trans }}</label>
+    </div>
+    <div class="mall-two-fields radio-buttons">
+        {% for method in __SELF__.paymentMethods %}
+            <div class="mall-form-control">
+                <label>
+                    <input type="radio" name="payment_method" value="{{ method.id }}" {{ method.id == 4 ? 'checked="1"' }}/>
+                    {{ method.name }}
+                </label>
+            </div>
+        {% else %}
+            <p>No methods available.</p>
+        {% endfor %}
+        <div data-validate-for="payment_method"></div>
+    </div>
+</div>

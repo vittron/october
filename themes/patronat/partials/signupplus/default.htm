@@ -1,0 +1,26 @@
+<div class="mt-4 col-12 col-lg-9 mx-auto">
+    <h1>{{ 'offline.mall::frontend.checkout.begin' | trans }}</h1>
+
+    <ul class="nav nav-tabs">'
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#new-user">
+                {{ 'offline.mall::frontend.checkout.new_user' | trans }}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#registered-user">
+                {{ 'offline.mall::frontend.checkout.registered_user' | trans }}
+            </a>
+        </li>
+    </ul>
+
+    <div class="tab-content">
+        <div class="tab-pane fade show active" id="new-user">
+            {% partial __SELF__ ~ '::signup' %}
+        </div>
+        <div class="tab-pane fade" id="registered-user">
+            {% partial __SELF__ ~ '::signin' %}
+        </div>
+    </div>
+    {% partial __SELF__ ~ '::scripts' %}
+</div>

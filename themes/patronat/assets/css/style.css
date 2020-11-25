@@ -306,6 +306,72 @@ footer.page-footer .footer-copyright {
     height: 3rem;
 }
 
+.mall-form-control input[type="radio"] {
+    -webkit-appearance: auto;
+    -moz-appearance: auto;
+    appearance: auto;
+    width: 20px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 1px;
+    margin-right: 10px;
+}
+
+.radio-buttons .mall-form-control {
+    width: auto;
+}
+
+.radio-buttons .mall-form-control label {
+    text-transform: none;
+    font-size: .9rem;
+}
+
+textarea#customer-notes {
+    height: 75px;
+}
+
+.mall-signup__guest-option {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.mall-signup-terms,
+.mall-signup-terms .mall-checkbox {
+    background-color: #fefcf9;
+    border-color: #fceb9d;
+    color: #582841;
+}
+
+.mall-signup-terms li {
+    padding: 5px 0;
+}
+
+.mall-signup-terms label.mall-checkbox {
+    padding-left: 45px;
+}
+
+.mall-signup-terms .mall-checkbox input {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.mall-signup-terms .mall-checkbox > span {
+    font-size: 1rem;
+    top: 2px;
+}
+
+.mall-form-control .input-group {
+    -webkit-box-align: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+
+}
+
+.mall-form-control .input-group .input-group-prepend {
+    padding-right: 5px;
+}
+
 @media only screen and (max-width: 992px) {
     .mall-products {
         padding-left: 0;
