@@ -1,13 +1,24 @@
-[viewBag]
 title = "Преса про нас"
-url = "/about-us/press-about-us"
+url = "/about-us/press"
 layout = "noSidebar"
 is_hidden = 0
-navigation_hidden = 0
+child_of = "about-us"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
 robot_index = "index"
 robot_follow = "follow"
 ==
 <h1 class="text-center dark-grey-text font-bold mb-4">Преса про нас</h1>
+
+<div class="row text-center">
+	<div class="col-lg-9 col-md-12 mx-auto my-lg-auto">
+        <nav class="breadcrumbs">
+            {% component 'breadcrumbs' %}
+        </nav>
+    </div>
+</div>
+
 <div class="row text-center">
 	<div class="col-lg-9 col-md-12 mx-auto my-lg-auto"><img src="/storage/app/media/uploaded-files/goroda.jpg" alt="Публікація в Город А" title="Публікація в Город А" class="img-fluid rounded z-depth-1 fr-fic fr-dib" data-result="success">
 
@@ -48,4 +59,9 @@ robot_follow = "follow"
 	<div class="col-lg-9 col-md-12 my-lg-auto mx-auto"><img src="/storage/app/media/uploaded-files/justukraine.jpg" alt="Команда проекту JustUkraine показала нашу продукцію" title="Команда проекту JustUkraine показала нашу продукцію" class="img-fluid rounded z-depth-1 fr-fic fr-dib">
 
 		<p class="mt-3">Youtube-канал JustUkraine <a href="https://www.youtube.com/watch?v=HfmcA2Gx5ys" target="_blank"><strong>розповів про нашу продукцію</strong></a> англійською мовою.</p>
+	</div></div>
+<hr>
+<div class="row mt-5 text-center">
+	<div class="col-lg-9 col-md-12 my-lg-auto mx-auto">
+		<p class="mt-3">Далі буде... :)</p>
 	</div></div>

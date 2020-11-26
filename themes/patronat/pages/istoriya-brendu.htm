@@ -1,13 +1,19 @@
-[viewBag]
 title = "Історія бренду"
 url = "/about-us/brand-history"
 layout = "noSidebar"
 is_hidden = 0
-navigation_hidden = 0
+child_of = "about-us"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
 robot_index = "index"
 robot_follow = "follow"
 ==
 <h1 class="text-center dark-grey-text font-bold">Історія бренду</h1>
+
+<nav class="breadcrumbs">
+    {% component 'breadcrumbs' %}
+</nav>
 
 <h2 class="text-center dark-grey-text font-bold my-4">0. Передумови</h2>
 <div class="row">

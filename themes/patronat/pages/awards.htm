@@ -1,13 +1,20 @@
-[viewBag]
 title = "Нагороди"
 url = "/about-us/awards"
 layout = "noSidebar"
 is_hidden = 0
-navigation_hidden = 0
+child_of = "about-us"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
 robot_index = "index"
 robot_follow = "follow"
 ==
 <h1 class="text-center dark-grey-text font-bold mb-4">Нагороди</h1>
+
+<nav class="breadcrumbs">
+    {% component 'breadcrumbs' %}
+</nav>
+
 <div class="row">
 	<div class="col-lg-7 col-md-9 mx-auto"><img src="/storage/app/media/uploaded-files/place3.jpg" alt="Диплом 3 місце на Всеукраїнському конкурсі" title="Диплом 3 місце на Всеукраїнському конкурсі" class="img-fluid rounded z-depth-1 fr-fic fr-dib" data-result="success"></div></div>
 <div class="row">

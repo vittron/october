@@ -2,7 +2,7 @@ title = "Список бажань"
 url = "/wishlists"
 layout = "noSidebar"
 is_hidden = 0
-child_of = "mey_no_parent"
+child_of = "shop/index"
 hide_crumb = 0
 remove_crumb_trail = 0
 crumb_disabled = 0
@@ -21,4 +21,10 @@ showTaxes = 1
 showShipping = 1
 showProceedToCheckoutButton = 0
 ==
+<h1 class="text-center">Список бажань</h1>
+
+<nav class="breadcrumbs">
+    {% component 'breadcrumbs' %}
+</nav>
+
 {% component 'wishlists' %}

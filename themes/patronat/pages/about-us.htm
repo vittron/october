@@ -1,11 +1,18 @@
-[viewBag]
 title = "Про нас"
 url = "/about-us"
 layout = "noSidebar"
 is_hidden = 0
-navigation_hidden = 0
+child_of = "shop/index"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
 robot_index = "index"
 robot_follow = "follow"
 ==
-<h1>Коротко про нас</h1>
+<h1 class="text-center">Коротко про нас</h1>
+
+<nav class="breadcrumbs">
+    {% component 'breadcrumbs' %}
+</nav>
+
 <p>Історію бренду та інші матеріали читайте на сторінках розділу.</p>

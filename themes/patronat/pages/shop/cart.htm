@@ -2,7 +2,7 @@ title = "Кошик"
 url = "/cart"
 layout = "noSidebar"
 is_hidden = 0
-child_of = "mey_no_parent"
+child_of = "shop/index"
 hide_crumb = 0
 remove_crumb_trail = 0
 crumb_disabled = 0
@@ -20,7 +20,10 @@ showProceedToCheckoutButton = 1
 
 [mallDependencies]
 ==
-
 <h1 class="my-3">{{ 'offline.mall::frontend.your_cart' | trans }}</h1>
+
+<nav class="breadcrumbs">
+    {% component 'breadcrumbs' %}
+</nav>
 
 {% component 'cart' %}

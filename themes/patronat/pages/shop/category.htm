@@ -2,9 +2,10 @@ title = "Категорія"
 url = "/category/:slug*"
 layout = "noSidebar"
 is_hidden = 0
-child_of = "mey_no_parent"
+child_of = "shop/index"
 hide_crumb = 0
 remove_crumb_trail = 0
+crumbElementTitle = "category-name"
 crumb_disabled = 0
 robot_index = "index"
 robot_follow = "follow"
@@ -44,7 +45,11 @@ includeSliderAssets = 0
         {% component 'productsFilter' %}
     </div>
     <div class="col-lg-9">
-        <h1 class="pl-lg-4 pl-3 pb-3">{{ products.category.name }}</h1>
+        <h1 class="pl-lg-4 pl-3 pb-3" id="category-name">{{ products.category.name }}</h1>
+        
+        <nav aria-label="breadcrumb">
+            {% component 'breadcrumbs' %}
+        </nav>
         
         <div class="col-12 d-lg-none">
             {% component 'productsFilterNarrow' %}

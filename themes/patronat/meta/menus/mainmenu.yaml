@@ -1,15 +1,152 @@
 name: MainMenu
 items:
     -
-        title: main
-        nesting: null
-        type: all-static-pages
+        title: Головна
+        nesting: 0
+        type: static-page
         url: null
         code: ''
-        reference: null
+        reference: index
         cmsPage: null
-        replace: 1
+        replace: 0
         viewBag:
+            locale:
+                en:
+                    title: ''
+                    url: ''
             isHidden: '1'
             cssClass: ''
             isExternal: '0'
+    -
+        title: Дослідження
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: doslidzhennya
+        cmsPage: null
+        replace: null
+        viewBag:
+            locale:
+                en:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Контакти
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: contacts
+        cmsPage: null
+        replace: null
+        viewBag:
+            locale:
+                en:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Про нас'
+        nesting: null
+        type: cms-page
+        url: null
+        code: ''
+        reference: pro-nas
+        cmsPage: null
+        replace: null
+        viewBag:
+            locale:
+                en:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Історія бренду'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: istoriya-brendu
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        en:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Історія напою'
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: drink-history
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        en:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Нагороди
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: awards
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        en:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Преса про нас'
+                type: cms-page
+                code: ''
+                reference: press
+                viewBag:
+                    locale:
+                        en:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: Документи
+                nesting: null
+                type: cms-page
+                url: null
+                code: ''
+                reference: documents
+                cmsPage: null
+                replace: null
+                viewBag:
+                    locale:
+                        en:
+                            title: ''
+                            url: ''
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
