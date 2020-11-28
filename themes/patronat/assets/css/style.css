@@ -89,9 +89,38 @@ footer.page-footer {
     font-weight: normal;
     color: white;
 }
+
+.navbar.navbar-light .mall-wishlist-button a .text-empty-list,
+.navbar.navbar-light .mall-wishlist-button a .text-empty-list,
+.navbar.navbar-light .mall-cart-button a .icon,
+.navbar.navbar-light .mall-cart-button a .icon {
+    color: white;
+}
+
 .navbar.navbar-light.no-sidebar .navbar-brand,
 .navbar.navbar-light.top-nav-collapse .navbar-brand {
     color: #582841;
+}
+
+.navbar.navbar-light.no-sidebar .mall-wishlist-button a .text-empty-list,
+.navbar.navbar-light.top-nav-collapse .mall-wishlist-button a .text-empty-list,
+.navbar.navbar-light.no-sidebar .mall-cart-button a .icon,
+.navbar.navbar-light.top-nav-collapse .mall-cart-button a .icon {
+    color: #582841;
+}
+
+.mall-wishlist-button a,
+.mall-cart-button a {
+    opacity: 0.8;
+}
+
+.mall-wishlist-button a:hover,
+.mall-cart-button a:hover {
+    opacity: 1;
+}
+
+.navbar.navbar-light .navbar-toggler {
+    padding: 0;
 }
 
 .navbar.navbar-light.no-sidebar .navbar-toggler-icon,

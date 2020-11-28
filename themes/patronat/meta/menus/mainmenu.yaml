@@ -19,13 +19,9 @@ items:
             isExternal: '0'
     -
         title: Дослідження
-        nesting: null
         type: cms-page
-        url: null
         code: ''
-        reference: doslidzhennya
-        cmsPage: null
-        replace: null
+        reference: research
         viewBag:
             locale:
                 en:
@@ -53,13 +49,9 @@ items:
             isExternal: '0'
     -
         title: 'Про нас'
-        nesting: null
         type: cms-page
-        url: null
         code: ''
-        reference: pro-nas
-        cmsPage: null
-        replace: null
+        reference: about-us
         viewBag:
             locale:
                 en:
@@ -122,9 +114,13 @@ items:
                     isExternal: '0'
             -
                 title: 'Преса про нас'
+                nesting: null
                 type: cms-page
+                url: null
                 code: ''
                 reference: press
+                cmsPage: null
+                replace: null
                 viewBag:
                     locale:
                         en:

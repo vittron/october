@@ -12,13 +12,19 @@ robot_follow = "follow"
 [viewBag]
 localeUrl[en] = "/cart"
 
-[cart]
+[mallDependencies]
+
+[Vittron\Mallplus\Components\Cart cart]
 showDiscountApplier = 1
 showTaxes = 0
 showShipping = 0
 showProceedToCheckoutButton = 1
 
-[mallDependencies]
+[OFFLINE\Mall\Components\Cart oldCart]
+showDiscountApplier = 1
+showTaxes = 0
+showShipping = 0
+showProceedToCheckoutButton = 1
 ==
 <h1 class="my-3">{{ 'offline.mall::frontend.your_cart' | trans }}</h1>
 
