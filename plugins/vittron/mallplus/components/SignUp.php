@@ -14,18 +14,6 @@ use Vittron\Mallplus\Classes\SignUpHandler;
 
 class SignUp extends BaseSignUp
 {
-    /**
-     * @var Collection<PaymentMethod>
-     */
-    public $paymentMethods;
-
-    public function init()
-    {
-        parent::init();
-
-        $this->paymentMethods = PaymentMethod::orderBy('sort_order', 'ASC')->get();
-    }
-
      /**
      * The user signs up for a new account and makes the order.
      *
@@ -37,7 +25,7 @@ class SignUp extends BaseSignUp
         $data                          = post();
         $data['requires_confirmation'] = $this->requiresConfirmation;
 
-        if ($user = app(SignUpHandler::class)->handle($data, (bool)post('as_guest'))) {
+        if ($user = app(SignUpHandler::class)->handle($data, (bool)post('create_account'))) {
             if ($this->requiresConfirmation) {
                 return ['.mall-signup-form' => $this->renderPartial($this->alias . '::confirm.htm')];
             }
@@ -57,7 +45,7 @@ class SignUp extends BaseSignUp
 
             Event::fire('mall.order.filled', [$payment]);
 
-            $this->setProperty('redirect', Url::to('checkout/done?order=' . $this->encode($order->id)));
+            $this->setProperty('redirect', Url::to('checkout/done?' . http_build_query(['order' => $this->encode($order->id)])));
             
             return $this->redirect();
         }

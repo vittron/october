@@ -12,13 +12,13 @@ robot_follow = "follow"
 [viewBag]
 localeUrl[en] = "/checkout/:step?"
 
-[checkout]
-step = "{{ :step }}"
-
 [signUpPlus]
+
+[checkoutPlus]
+step = "{{ :step }}"
 ==
 {% if not user %}
     {% component 'signUpPlus' %}
 {% else %}
-    {% component 'checkout' %}
+    {% component 'checkoutPlus' %}
 {% endif %}

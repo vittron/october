@@ -1,0 +1,11 @@
+<div class="mall-checkout-result mall-checkout-result--successful">
+    <h3 class="mall-checkout-result__heading">
+        {{ 'offline.mall::frontend.checkout.order.successful.heading' | trans }}!
+    </h3>
+    <p>{{ 'offline.mall::frontend.checkout.order.successful.line_1' | trans }}</p>
+    {% partial __SELF__ ~ '::resultactions' %}
+</div>
+
+{% if __SELF__.dataLayer %}
+        {% partial __SELF__ ~ '::datalayer' %}
+{% endif %}

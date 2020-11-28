@@ -17,10 +17,10 @@ use Vittron\Mallplus\Models\Address;
 
 class SignUpHandler extends \OFFLINE\Mall\Classes\Customer\DefaultSignUpHandler
 {
-    public function handle(array $data, bool $asGuest = false): ?User
+    public function handle(array $data, bool $createAccount = true): ?User
     {
         // fix since we changed asGuest checkbock to the asSignedUpUser
-        $this->asGuest = !$asGuest;
+        $this->asGuest = !$createAccount;
 
         return $this->signUp($data);
     }
@@ -154,10 +154,10 @@ class SignUpHandler extends \OFFLINE\Mall\Classes\Customer\DefaultSignUpHandler
     public static function messages(): array
     {
         return array_merge(parent::messages(), [
-            'phone.required'          => trans('offline.mall::lang.components.signup.errors.phone.required'),
-            'phone.numeric'          => trans('offline.mall::lang.components.signup.errors.phone.numeric'),
-            'phone.min'          => trans('offline.mall::lang.components.signup.errors.phone.min'),
-            'phone.max'          => trans('offline.mall::lang.components.signup.errors.phone.max'),
+            'phone.required'      => trans('offline.mall::lang.components.signup.errors.phone.required'),
+            'phone.numeric'       => trans('offline.mall::lang.components.signup.errors.phone.numeric'),
+            'phone.min'           => trans('offline.mall::lang.components.signup.errors.phone.min'),
+            'phone.max'           => trans('offline.mall::lang.components.signup.errors.phone.max'),
         ]);
     }
 }

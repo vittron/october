@@ -30,11 +30,11 @@
     </div>
 
     <div class="mall-signup__billing-address">
-        {% partial __SELF__ ~ '::addressform' type='billing' %}
+        {% partial 'checkoutPlus::addressform' type='billing' %}
     </div>
 
     <div class="mall-checkout__payment-methods">
-        {% partial __SELF__ ~ '::paymentmethod' %}
+        {% partial 'checkoutPlus::paymentmethod' %}
     </div>
 
     <div class="mall-form-control">
@@ -79,7 +79,7 @@
     {% partial __SELF__ ~ '::terms' %}
 
     <div class="mall-form-actions">
-        <button class="btn btn-success btn-lg btn-block mall-btn-signup" type="submit">
+        <button class="btn btn-success btn-lg btn-block mall-btn-signup js-mall-checkout" type="submit">
             {{ 'offline.mall::frontend.checkout.checkout' | trans }} >>
         </button>
     </div>

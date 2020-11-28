@@ -39,6 +39,7 @@ class Plugin extends PluginBase
     {
         return [
             'Vittron\Mallplus\Components\SignUp' => 'signUpPlus',
+            'Vittron\Mallplus\Components\Checkout' => 'checkoutPlus',
         ];
     }
 
