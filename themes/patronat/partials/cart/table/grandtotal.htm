@@ -1,0 +1,17 @@
+<tr class="mall-cart__grand-total">
+    <td></td>
+    <td colspan="3">
+        {% if __SELF__.showShipping or totals.appliedDiscounts.count > 0 %}
+            {{ 'offline.mall::frontend.grand_total' | trans }}
+        {% else %}
+            {{ 'offline.mall::frontend.total' | trans }}
+        {% endif %}
+    </td>
+    <td class="text-right">
+        {% if __SELF__.showShipping or totals.appliedDiscounts.count > 0 %}
+            {{ totals.totalPostTaxes | money }}
+        {% else %}
+            {{ totals.productPostTaxes | money }}
+        {% endif %}
+    </td>
+</tr>
