@@ -6,7 +6,7 @@
         {% partial __SELF__ ~ '::form' review=__SELF__.customerReview %}
     {% else %}
         <a href="{{ __SELF__.accountPage | page }}" class="mall-product-reviews__login-required">
-            {{ 'offline.mall::frontend.reviews.login_create_review' | trans }}.
+            Login to create a review.
         </a>
     {% endif %}
 </div>

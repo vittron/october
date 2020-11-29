@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit4b4af7b3fdf79f829d120b05fcef6cc6
+class ComposerStaticInitd0f3cce6e8fc41ce89792baac13a3ad4
 {
     public static $files = array (
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -15,7 +15,6 @@ class ComposerStaticInit4b4af7b3fdf79f829d120b05fcef6cc6
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
-        '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
         '25072dd6e2470089de65ae7bf11d3109' => __DIR__ . '/..' . '/symfony/polyfill-php72/bootstrap.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
         'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
@@ -35,7 +34,6 @@ class ComposerStaticInit4b4af7b3fdf79f829d120b05fcef6cc6
         array (
             'Symfony\\Polyfill\\Php80\\' => 23,
             'Symfony\\Polyfill\\Php72\\' => 23,
-            'Symfony\\Polyfill\\Php70\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
             'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
             'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
@@ -122,10 +120,6 @@ class ComposerStaticInit4b4af7b3fdf79f829d120b05fcef6cc6
         'Symfony\\Polyfill\\Php72\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php72',
-        ),
-        'Symfony\\Polyfill\\Php70\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-php70',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
@@ -246,7 +240,7 @@ class ComposerStaticInit4b4af7b3fdf79f829d120b05fcef6cc6
         ),
         'Filebase\\' => 
         array (
-            0 => __DIR__ . '/..' . '/filebase/filebase/src',
+            0 => __DIR__ . '/..' . '/tmarois/filebase/src',
         ),
         'Elasticsearch\\' => 
         array (
@@ -281,11 +275,8 @@ class ComposerStaticInit4b4af7b3fdf79f829d120b05fcef6cc6
     );
 
     public static $classMap = array (
-        'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
-        'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
-        'DivisionByZeroError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/DivisionByZeroError.php',
+        'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Dompdf\\Cpdf' => __DIR__ . '/..' . '/dompdf/dompdf/lib/Cpdf.php',
-        'Error' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/Error.php',
         'HTML5_Data' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Data.php',
         'HTML5_InputStream' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/InputStream.php',
         'HTML5_Parser' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/Parser.php',
@@ -293,10 +284,7 @@ class ComposerStaticInit4b4af7b3fdf79f829d120b05fcef6cc6
         'HTML5_TreeBuilder' => __DIR__ . '/..' . '/dompdf/dompdf/lib/html5lib/TreeBuilder.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'Omnipay\\Omnipay' => __DIR__ . '/..' . '/omnipay/common/src/Omnipay.php',
-        'ParseError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ParseError.php',
-        'SessionUpdateTimestampHandlerInterface' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/SessionUpdateTimestampHandlerInterface.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
-        'TypeError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/TypeError.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
     );
@@ -304,10 +292,10 @@ class ComposerStaticInit4b4af7b3fdf79f829d120b05fcef6cc6
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit4b4af7b3fdf79f829d120b05fcef6cc6::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit4b4af7b3fdf79f829d120b05fcef6cc6::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit4b4af7b3fdf79f829d120b05fcef6cc6::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit4b4af7b3fdf79f829d120b05fcef6cc6::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitd0f3cce6e8fc41ce89792baac13a3ad4::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitd0f3cce6e8fc41ce89792baac13a3ad4::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitd0f3cce6e8fc41ce89792baac13a3ad4::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitd0f3cce6e8fc41ce89792baac13a3ad4::$classMap;
 
         }, null, ClassLoader::class);
     }
