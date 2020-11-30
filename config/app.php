@@ -129,6 +129,7 @@ return [
         'System\ServiceProvider',
         'Webup\LaravelSendinBlue\SendinBlueServiceProvider',
         'Clockwork\Support\Laravel\ClockworkServiceProvider',
+        'Illuminate\Notifications\NotificationServiceProvider',
     ]),
 
     /*
@@ -165,7 +166,7 @@ return [
     'aliases' => array_merge(include(base_path('modules/system/aliases.php')), [
 
         // 'Str' => 'Illuminate\Support\Str', // Example
-
+        'Notification' => Illuminate\Support\Facades\Notification::class,
     ]),
 
 ];
