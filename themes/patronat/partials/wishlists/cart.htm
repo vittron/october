@@ -1,0 +1,32 @@
+{% if __SELF__.currentItem.items.count < 1 %}
+    {% partial __SELF__ ~ '::empty' %}
+{% else %}
+
+    {% set items = __SELF__.currentItem.items %}
+    {% set totals = __SELF__.currentItem.totals %}
+
+    <div class="mall-cart__wrapper">
+        <div class="mall-table-overflow" style="overflow-y: auto">
+            <table class="mall-cart__table">
+                <thead>
+                {% partial 'oldCart::table/header' %}
+                </thead>
+                <tbody>
+                {% for product in __SELF__.currentItem.items %}
+                    {% partial 'oldCart::table/entry' product=product %}
+                {% endfor %}
+                </tbody>
+                <tfoot>
+                {% partial 'oldCart::table/total' totals=totals %}
+                {% if __SELF__.showShipping %}
+                    {% partial __SELF__ ~ '::shipping'  shipping=totals.shippingTotal %}
+                    {% partial 'oldCart::table/grandtotal' totals=totals %}
+                {% endif %}
+                {% partial 'oldCart::table/taxes' totals=totals %}
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+{% endif %}
+

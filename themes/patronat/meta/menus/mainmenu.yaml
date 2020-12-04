@@ -18,10 +18,28 @@ items:
             cssClass: ''
             isExternal: '0'
     -
+        title: Вітрина
+        type: mall-category
+        code: ''
+        reference: '2'
+        replace: 0
+        viewBag:
+            locale:
+                en:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
         title: Дослідження
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: research
+        cmsPage: null
+        replace: null
         viewBag:
             locale:
                 en:
@@ -49,9 +67,13 @@ items:
             isExternal: '0'
     -
         title: 'Про нас'
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: about-us
+        cmsPage: null
+        replace: null
         viewBag:
             locale:
                 en:

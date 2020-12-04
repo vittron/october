@@ -199,10 +199,6 @@ footer.page-footer .footer-copyright {
     color: #582841;
 }
 
-.mall-products-item__image img {
-    object-fit: cover;    
-}
-
 .mall-products-item__name {
     font-size: 1rem;
     max-height: 2.5rem;
