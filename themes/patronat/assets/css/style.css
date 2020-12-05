@@ -426,5 +426,12 @@ textarea#customer-notes {
     .mall-discount-applier form {
         width: 100%;
     }
-}
     
+    .mall-products-item__name {
+        max-height: 3.8rem;
+    }
+    
+    .mall-products-item__short-description {
+        max-height: 5.3rem;
+    }
+}
