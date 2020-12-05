@@ -17,6 +17,8 @@ linkTarget = "_blank"
 [fontAwesomeCssLink]
 
 [googleTracker]
+
+[mallDependencies]
 ==
 <?php
 function onStart()
@@ -29,7 +31,7 @@ function onStart()
 {% partial 'site/head' %}
 {% partial 'site/scrollingNavbar' mainLayout="frontpage" %}
 
-{variable name="introTitle" label="Intro Title" tab="Intro" type="text"}{/variable}
+{variable name="{% component 'mallDependencies' %}introTitle" label="Intro Title" tab="Intro" type="text"}{/variable}
 {variable name="tagline" label="Tagline" tab="Intro" type="text"}{/variable}
 
 <main>
@@ -39,9 +41,9 @@ function onStart()
             <div class="full-bg-img flex-center">
                 <ul class="animated fadeInUp">
                     <li>
-                        <h1 class="display-3 mb-4 font-bold">{{ introTitle }}</h1></li>
+                        <h1 class="display-3 mb-4 font-bold">Медове вино "ПаТронАт"</h1></li>
                     <li>
-                        <h2 class="mb-5 tagline">{{ tagline }}</h2>
+                        <h2 class="mb-5 tagline">Його не п'ють. Його цілують...</h2>
                     </li>
                 </ul>
             </div>

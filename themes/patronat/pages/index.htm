@@ -1,18 +1,19 @@
-[viewBag]
 title = "Головна"
 url = "/"
 layout = "frontpage"
-is_hidden = 0
-navigation_hidden = 0
 meta_title = "медове вино, купити вино, купить вино"
 meta_description = "купити вино, купить вино, медове вино, мед, медівка, медовуха"
-introTitle = "Медове вино \"ПаТронАт\""
-tagline = "Його не п'ють. Його цілують"
-seo_title = "медове вино, купити вино, купить вино"
-seo_description = "купити вино, купить вино, медове вино, мед, медівка, медовуха"
+is_hidden = 0
+child_of = "mey_no_parent"
+hide_crumb = 1
+remove_crumb_trail = 0
+crumb_disabled = 0
 seo_keywords = "купити вино, купить вино, медове вино, мед, медівка, медовуха"
 robot_index = "index"
 robot_follow = "follow"
+
+[viewBag]
+localeUrl[en] = "/"
 ==
 <div class="container">
 	<section class="row my-4 greeting">
@@ -30,8 +31,8 @@ robot_follow = "follow"
 	</section>
 
 	<p class="text-center"><a class="btn btn-success btn-lg to-products" href="/category/vitrina">До продукції &gt;&gt;</a></p>
-	<section class="benefits my-4">
 
+	<section class="benefits my-4">
 		<h2 class="text-center title dark-grey-text font-bold wow fadeIn pt-5 pb-3">Наші переваги</h2>
 		<div class="row">
 			<div class="col-md-6 col-lg-3">
@@ -43,4 +44,10 @@ robot_follow = "follow"
 			<div class="col-md-6 col-lg-3">
 				<div class="card card-body hoverable wow fadeIn mt-3">Ідеальний подарунок для виномана.</div></div></div>
 	</section>
+	
+	<div class="mall-signup-terms my-5 pt-4">
+	    {% content "delivery-terms.htm" %}
+    </div>
+    
+    <p class="text-center mb-5"><a class="btn btn-success btn-lg to-products" href="/category/vitrina">До продукції &gt;&gt;</a></p>
 </div>

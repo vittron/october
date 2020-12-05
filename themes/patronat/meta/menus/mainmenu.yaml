@@ -2,26 +2,22 @@ name: MainMenu
 items:
     -
         title: Головна
-        nesting: 0
-        type: static-page
-        url: null
+        type: cms-page
         code: ''
         reference: index
-        cmsPage: null
-        replace: 0
         viewBag:
             locale:
                 en:
                     title: ''
                     url: ''
-            isHidden: '1'
+            isHidden: '0'
             cssClass: ''
             isExternal: '0'
     -
         title: Вітрина
         type: mall-category
         code: ''
-        reference: '2'
+        reference: '4'
         replace: 0
         viewBag:
             locale:
