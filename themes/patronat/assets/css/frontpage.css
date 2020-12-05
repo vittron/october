@@ -66,6 +66,16 @@ body {
 
 @media only screen and (orientation: portrait) {
     .hm-black-light {
-        background-image: url(/storage/app/media/frontpage_bg_small_vert.jpg);
+        background-image: url(/storage/app/media/frontpage_bg_small_vert2.jpg);
+    }
+    .full-bg-img ul {
+        top: -20%;
+    }
+
+}
+
+@media only screen and (orientation: portrait) and (max-width: 610px) {
+    .hm-black-light {
+        background-image: url(/storage/app/media/frontpage_bg_xsmall_vert.jpg);
     }
 }
