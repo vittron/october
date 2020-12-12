@@ -27,7 +27,8 @@ body {
     top: 10%;
 }
 
-.greeting p {
+.greeting p,
+.drink-history p {
     font-size: 1.25rem;
     text-align: center;
 }
@@ -43,7 +44,8 @@ body {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px) {
-    .greeting p {
+    .greeting p,
+    .drink-history p {
         font-size: 0.9rem;
         line-height: 1.2;
         margin-bottom: 0.5rem;
@@ -55,7 +57,7 @@ body {
     
     .hm-black-light {
         background-image: url(/storage/app/media/frontpage_bg_1000.jpg);
-    }
+    }  
 }
 
 @media only screen and (max-width: 768px) {
@@ -68,10 +70,14 @@ body {
     .hm-black-light {
         background-image: url(/storage/app/media/frontpage_bg_small_vert2.jpg);
     }
+
     .full-bg-img ul {
         top: -20%;
     }
 
+    .navbar.scrolling-navbar {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
 }
 
 @media only screen and (orientation: portrait) and (max-width: 610px) {

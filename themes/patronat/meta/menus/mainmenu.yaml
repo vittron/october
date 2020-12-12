@@ -2,9 +2,13 @@ name: MainMenu
 items:
     -
         title: Головна
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: index
+        cmsPage: null
+        replace: null
         viewBag:
             locale:
                 en:

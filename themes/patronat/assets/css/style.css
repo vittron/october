@@ -63,6 +63,7 @@ footer.page-footer {
 .navbar.navbar-light .navbar-nav .nav-item a.nav-link {
     font-weight: normal;
     color: white;
+    width: 100%;
 }
 .navbar.navbar-light .navbar-nav .nav-item a.nav-link:hover,
 .navbar.navbar-light .navbar-nav .nav-item.active a.nav-link:hover {
