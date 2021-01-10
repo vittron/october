@@ -149,6 +149,7 @@ class QuickCheckout extends MallComponent
             'failed' => trans('offline.mall::lang.components.checkout.steps.failed'),
             'cancelled' => trans('offline.mall::lang.components.checkout.steps.cancelled'),
             'done' => trans('offline.mall::lang.components.checkout.steps.done'),
+            'payment' => trans('offline.mall::lang.components.checkout.steps.payment'),
         ];
     }
 
@@ -171,7 +172,7 @@ class QuickCheckout extends MallComponent
         if ($this->step === 'overview') {
             $this->addComponent(AddressSelector::class, 'billingAddressSelector', ['type' => 'billing', 'redirect' => 'quickCheckout']);
             $this->addComponent(AddressSelector::class, 'shippingAddressSelector', ['type' => 'shipping', 'redirect' => 'quickCheckout']);
-        } elseif ($this->step === 'payment') {
+        } elseif ($this->step === 'payment' || $this->step === 'cancelled') {
             $this->addComponent(PaymentMethodSelector::class, 'paymentMethodSelector', []);
         }
         $this->setData();

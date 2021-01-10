@@ -78,8 +78,12 @@ class DomManipulator
     {
         return function ($matches) {
             $node = $this->loadImageTag($matches[0]);
+            // The node could not be parsed. Return the original match.
+            if ($node === false) {
+                return $matches[0];
+            }
 
-            // This image should explicitly be ignore, so return the original tag.
+            // This image should explicitly be ignored, so return the original tag.
             if ($node->getAttribute('data-responsive') === 'ignore') {
                 return $matches[0];
             }
@@ -124,13 +128,28 @@ class DomManipulator
      *
      * @param string $tag
      *
-     * @return DOMElement
+     * @return DOMElement|boolean
      */
-    protected function loadImageTag(string $tag): DOMElement
+    protected function loadImageTag(string $tag)
     {
-        $this->dom->loadHTML(mb_convert_encoding($tag, 'HTML-ENTITIES', 'UTF-8'));
+        try {
+            // Try and fix invalid XML. If an img source contains unescaped symbols like &
+            // the DOMDocument will not be able to parse the markup. This is why we
+            // encode the whole tag and then convert the < and > entities back.
+            // Not pretty, but it works.
+            $cleanedTag = mb_convert_encoding($tag, 'HTML-ENTITIES', 'UTF-8');
+            $cleanedTag = htmlspecialchars($cleanedTag, ENT_NOQUOTES, 'UTF-8', false);
+            $cleanedTag = str_replace('&lt;', '<', $cleanedTag);
+            $cleanedTag = str_replace('&gt;', '>', $cleanedTag);
 
-        return $this->dom->getElementsByTagName('img')->item(0);
+            $this->dom->loadHTML($cleanedTag);
+
+            return $this->dom->getElementsByTagName('img')->item(0);
+        } catch (\Throwable $e) {
+            $this->log(sprintf('Failed to parse tag. HTML might contain errors: %s', $tag), $e);
+        }
+
+        return false;
     }
 
     /**
