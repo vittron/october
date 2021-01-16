@@ -19,10 +19,26 @@ items:
             isExternal: '0'
     -
         title: Вітрина
+        nesting: null
         type: mall-category
+        url: null
         code: ''
         reference: '4'
+        cmsPage: null
         replace: 0
+        viewBag:
+            locale:
+                en:
+                    title: ''
+                    url: ''
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: Відгуки
+        type: cms-page
+        code: ''
+        reference: reviews
         viewBag:
             locale:
                 en:

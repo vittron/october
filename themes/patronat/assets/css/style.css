@@ -153,6 +153,10 @@ article a .emphasis {
     font-size: 1.6rem;
 }
 
+.reviews .stars {
+    color: #fccb6d;
+}
+
 footer.page-footer {
     background-color: #fccb6d;
 }

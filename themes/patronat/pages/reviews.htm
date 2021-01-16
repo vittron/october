@@ -1,0 +1,27 @@
+title = "Відгуки"
+url = "/feedback"
+layout = "noSidebar"
+meta_title = "відгуки"
+is_hidden = 0
+child_of = "index"
+hide_crumb = 0
+remove_crumb_trail = 0
+crumb_disabled = 0
+seo_keywords = "відгуки, медові вина"
+robot_index = "index"
+robot_follow = "follow"
+
+[reviews]
+categoryFilter = "{{ :category }}"
+==
+<h1 class="text-center dark-grey-text font-bold mb-4">Відгуки</h1>
+
+<nav class="breadcrumbs">
+    {% component 'breadcrumbs' %}
+</nav>
+
+<div class="row">
+	<div class="col-lg-7 col-md-9 mx-auto">
+	    {% component 'reviews' %}
+	</div>
+</div>
