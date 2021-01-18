@@ -19,12 +19,9 @@ items:
             isExternal: '0'
     -
         title: Вітрина
-        nesting: null
         type: mall-category
-        url: null
         code: ''
         reference: '4'
-        cmsPage: null
         replace: 0
         viewBag:
             locale:
@@ -36,9 +33,13 @@ items:
             isExternal: '0'
     -
         title: Відгуки
+        nesting: null
         type: cms-page
+        url: null
         code: ''
         reference: reviews
+        cmsPage: null
+        replace: null
         viewBag:
             locale:
                 en:
