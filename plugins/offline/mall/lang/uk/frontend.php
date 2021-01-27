@@ -43,7 +43,7 @@ return [
     'form.password' => 'Пароль',
     'form.new_password' => 'Новий пароль',
     'form.password_repeat' => 'Повторіть пароль',
-    'form.signin' => 'Ввійти',
+    'form.signin' => 'Увійти',
     'form.signup' => 'Реєстрація',
     'signup.as_guest' => 'Реєстрація в якості гостя',
     'signup.create_account' => 'Хочу зареєструватися на сайті',

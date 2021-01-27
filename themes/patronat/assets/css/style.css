@@ -60,6 +60,10 @@ footer.page-footer {
     }
 }
 
+.success.flash-message {
+    top: 70px;
+}
+
 .navbar.navbar-light .navbar-nav .nav-item a.nav-link {
     font-weight: normal;
     color: white;
@@ -342,9 +346,9 @@ footer.page-footer .footer-copyright {
 }
 
 .mall-form-control input[type="radio"] {
-    -webkit-appearance: auto;
-    -moz-appearance: auto;
-    appearance: auto;
+    -webkit-appearance: radio;
+    -moz-appearance: radio;
+    appearance: radio;
     width: 20px;
     display: inline-block;
     vertical-align: middle;
@@ -353,7 +357,7 @@ footer.page-footer .footer-copyright {
 }
 
 .radio-buttons .mall-form-control {
-    width: auto;
+    width: 50%;
 }
 
 .radio-buttons .mall-form-control label {

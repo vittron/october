@@ -21,7 +21,7 @@ items:
         title: Вітрина
         type: mall-category
         code: ''
-        reference: '4'
+        reference: '2'
         replace: 0
         viewBag:
             locale:
