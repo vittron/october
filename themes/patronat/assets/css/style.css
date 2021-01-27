@@ -346,11 +346,6 @@ footer.page-footer .footer-copyright {
 }
 
 .mall-form-control input[type="radio"] {
-    -webkit-appearance: checkbox;
-    appearance: checkbox;
-    -webkit-appearance: auto;
-    -moz-appearance: auto;
-    appearance: auto;
     width: 20px;
     display: inline-block;
     vertical-align: middle;
