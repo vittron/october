@@ -3,7 +3,7 @@
 {% set count = cart.cart.products.count %}
 
 <a href="{{ 'shop/cart' | page }}" class="flex flex-col items-center justify-center no-underline">
-    <div class="mall-cart-count absolute bg-red text-white text-2xs rounded px-1 leading-normal ml-4 -mt-8 {{ count < 1 ? 'invisible' : '' }}">
+    <div class="mall-cart-count absolute bg-red text-white text-2xs rounded px-1 leading-normal ml-4 -mt-5 {{ count < 1 ? 'invisible' : '' }}">
         {{ count }}
     </div>
     <svg class="icon fill-current w-6" viewBox="0 0 20 20" version="1.1"
